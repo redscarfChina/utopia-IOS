@@ -9,7 +9,6 @@
 #import "loginVC.h"
 #import "welcomeVC.h"
 @interface loginVC ()
-
 @end
 
 @implementation loginVC
@@ -24,7 +23,8 @@
         UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"账号或密码有误，请重新输入" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [av show];
     }else {
-        UITabBarController *tab=[self.storyboard instantiateViewControllerWithIdentifier:@"tab"];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UITabBarController* tab=[sb instantiateViewControllerWithIdentifier:@"tab"];
         [self presentViewController:tab animated:YES completion:nil];
     }
 }

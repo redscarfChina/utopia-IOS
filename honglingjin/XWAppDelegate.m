@@ -14,14 +14,14 @@
 {
     [[UINavigationBar appearance]setBackgroundImage:[UIImage imageNamed:@"bkg"] forBarMetrics:UIBarMetricsDefault];
     [[UITabBar appearance]setBackgroundImage:[UIImage imageNamed:@"bkg"]];
-//    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-//    int i = [[ud objectForKey:@"times"]intValue];
-//    if (!i) {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    int i = [[ud objectForKey:@"times"]intValue];
+    if (!i) {
         welcomeVC *wvc = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"welcome"];
         self.window.rootViewController = wvc;
-//    }
-//    [ud setObject:[NSNumber numberWithInt:++i] forKey:@"times"];
-//    [ud synchronize];
+    }
+    [ud setObject:[NSNumber numberWithInt:++i] forKey:@"times"];
+    [ud synchronize];
     return YES;
 }
 							
