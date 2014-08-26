@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface AdviserCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *iv;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *introduceLabel;
-@property (weak, nonatomic) IBOutlet UIButton *beginBT;
-@property (weak, nonatomic) IBOutlet UILabel *attributeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tradeNumLabel;
-@property (weak, nonatomic) IBOutlet UILabel *commentNumLabel;
-@property (weak, nonatomic) IBOutlet UIButton *checkCommentBT;
 
+@property (nonatomic, strong) UIImageView *userIV;
+@property (nonatomic, strong) UILabel *userNameLabel;
+@property (nonatomic, strong) UILabel *introduceLabel;
+@property (nonatomic, strong) UIButton *beginToTalkBT;
+@property (nonatomic, strong) UILabel *attributeLabel;
+@property (nonatomic, strong) UILabel *tradeNumLabel;
+@property (nonatomic, strong) UILabel *commentNumLabel;
+@property (nonatomic, strong) UIButton *checkCommentBT;
+
+-(void)createContentInCell;
++(CGFloat)cellHeight;
 @end

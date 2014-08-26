@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface TopicCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *topicLabel;
-@property (weak, nonatomic) IBOutlet UILabel *masterLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *iv;
-@property (weak, nonatomic) IBOutlet UIButton *joinBT;
-@property (weak, nonatomic) IBOutlet UILabel *attributeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *numLabel;
 
+@property (nonatomic, strong) UILabel *topicLabel;
+@property (nonatomic, strong) UILabel *userNameLabel;
+@property (nonatomic, strong) UIImageView *userIV;
+@property (nonatomic, strong) UIButton *joinToTalkBT;
+@property (nonatomic, strong) UILabel *attributeLabel;
+@property (nonatomic, strong) UILabel *topicNumLabel;
+
+-(void)createContentInCell;
++(CGFloat)cellHeight;
 @end

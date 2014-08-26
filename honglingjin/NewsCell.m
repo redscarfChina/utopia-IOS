@@ -10,16 +10,55 @@
 
 @implementation NewsCell
 
-- (void)awakeFromNib
-{
-    self.iv.layer.cornerRadius=10;
-    self.iv.layer.masksToBounds=YES;
-    self.iv.image = [UIImage imageNamed:@"iv"];
-    self.nameLabel.text = @"Joey";
-    self.text.text = @"一般来讲，我们不...";
-    self.stateLabel.text = @"已结束";
-    self.againBT.layer.cornerRadius=10;
-    
-}
 
+-(void)createContentInCell{
+    //用户图像
+    if (!self.userIV) {
+        self.userIV = [[UIImageView alloc]initWithFrame:CGRectMake(20, 10, 40, 40)];
+        [self.userIV setImage:[UIImage imageNamed:@"iv"]];
+        [self addSubview:self.userIV];
+    }
+    //用户昵称
+    if (!self.userNameLabel) {
+        self.userNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 10, 115, 20)];
+        self.userNameLabel.text = @"joety";
+        self.userNameLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:14];
+        self.userNameLabel.textAlignment = NSTextAlignmentLeft;
+        [self addSubview:self.userNameLabel];
+    }
+    //用户介绍
+    if (!self.introduceLabel) {
+        self.introduceLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 30, 115, 25)];
+        self.introduceLabel.text = @"一般来讲，我们不...";
+        self.introduceLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
+        [self addSubview:self.introduceLabel];
+    }
+    //交流状态
+    if (!self.stateLabel) {
+        self.stateLabel = [[UILabel alloc]initWithFrame:CGRectMake(265, 10, 42, 16)];
+        self.stateLabel.text = @"已结束";
+        self.stateLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
+        self.stateLabel.textColor = [UIColor lightGrayColor];
+        self.stateLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.stateLabel];
+    }
+    //再请教
+    if (!self.againToTalkBT) {
+        self.againToTalkBT = [[UIButton alloc]initWithFrame:CGRectMake(263, 30, 50, 20)];
+        self.againToTalkBT.titleLabel.text = @"再请教";
+        self.againToTalkBT.titleLabel.textColor = [UIColor whiteColor];
+        self.againToTalkBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
+        self.againToTalkBT.layer.cornerRadius = 10;
+        self.againToTalkBT.backgroundColor = [UIColor greenColor];
+        [self addSubview:self.againToTalkBT];
+        [self.againToTalkBT addTarget:self action:@selector(gotoTalkView) forControlEvents:UIControlEventTouchUpInside];
+    }
+}
+-(void)gotoTalkView
+{
+    //...
+}
++(CGFloat)cellHeight{
+    return 57;
+}
 @end

@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface NewsCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *iv;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *text;
-@property (weak, nonatomic) IBOutlet UILabel *stateLabel;
-@property (weak, nonatomic) IBOutlet UIButton *againBT;
 
+@property (nonatomic, strong) UIImageView *userIV;
+@property (nonatomic, strong) UILabel *userNameLabel;
+@property (nonatomic, strong) UILabel *introduceLabel;
+@property (nonatomic, strong) UILabel *stateLabel;
+@property (nonatomic, strong) UIButton *againToTalkBT;
+
+
+-(void)createContentInCell;
++(CGFloat)cellHeight;
 @end

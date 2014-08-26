@@ -24,6 +24,9 @@
 		4B4A9E6719A63F340035A689 /* interestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9E6519A63F340035A689 /* interestVC.xib */; };
 		4B4A9E6C19A6404D0035A689 /* signatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9E6A19A6404D0035A689 /* signatureVC.m */; };
 		4B4A9E6D19A6404D0035A689 /* signatureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9E6B19A6404D0035A689 /* signatureVC.xib */; };
+		4B4AED2B19AC889D000E2FA4 /* AdviserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED2A19AC889D000E2FA4 /* AdviserViewController.m */; };
+		4B4AED2E19AC8ADD000E2FA4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED2D19AC8ADD000E2FA4 /* MessageViewController.m */; };
+		4B4AED3119ACDD66000E2FA4 /* TopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED3019ACDD66000E2FA4 /* TopicViewController.m */; };
 		4B644B7619A585C600DCFD49 /* nameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B644B7419A585C600DCFD49 /* nameVC.m */; };
 		4B644B7719A585C600DCFD49 /* nameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B644B7519A585C600DCFD49 /* nameVC.xib */; };
 		4B644B7B19A5A06800DCFD49 /* userInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B644B7A19A5A06800DCFD49 /* userInfo.m */; };
@@ -50,9 +53,6 @@
 		4B801CC919A18D1200CFBDA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B801CAB19A18D1200CFBDA8 /* UIKit.framework */; };
 		4B801CD119A18D1300CFBDA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B801CCF19A18D1300CFBDA8 /* InfoPlist.strings */; };
 		4B801CD319A18D1300CFBDA8 /* honglingjinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CD219A18D1300CFBDA8 /* honglingjinTests.m */; };
-		4B801CE719A1960200CFBDA8 /* VCAdviser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CE619A1960200CFBDA8 /* VCAdviser.m */; };
-		4B801CEA19A1977300CFBDA8 /* VCTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CE919A1977300CFBDA8 /* VCTopic.m */; };
-		4B801CF219A19DCA00CFBDA8 /* VCNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CF119A19DCA00CFBDA8 /* VCNews.m */; };
 		4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */; };
 		4BA5CBB219A473F400B32CC0 /* chatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CBB119A473F400B32CC0 /* chatVC.m */; };
 		4BAB147319AB047200829309 /* welcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147219AB047200829309 /* welcomeVC.m */; };
@@ -103,6 +103,12 @@
 		4B4A9E6919A6404D0035A689 /* signatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signatureVC.h; sourceTree = "<group>"; };
 		4B4A9E6A19A6404D0035A689 /* signatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signatureVC.m; sourceTree = "<group>"; };
 		4B4A9E6B19A6404D0035A689 /* signatureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = signatureVC.xib; sourceTree = "<group>"; };
+		4B4AED2919AC889D000E2FA4 /* AdviserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviserViewController.h; sourceTree = "<group>"; };
+		4B4AED2A19AC889D000E2FA4 /* AdviserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdviserViewController.m; sourceTree = "<group>"; };
+		4B4AED2C19AC8ADD000E2FA4 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		4B4AED2D19AC8ADD000E2FA4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		4B4AED2F19ACDD66000E2FA4 /* TopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicViewController.h; sourceTree = "<group>"; };
+		4B4AED3019ACDD66000E2FA4 /* TopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicViewController.m; sourceTree = "<group>"; };
 		4B644B7319A585C600DCFD49 /* nameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nameVC.h; sourceTree = "<group>"; };
 		4B644B7419A585C600DCFD49 /* nameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nameVC.m; sourceTree = "<group>"; };
 		4B644B7519A585C600DCFD49 /* nameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nameVC.xib; sourceTree = "<group>"; };
@@ -137,12 +143,6 @@
 		4B801CCE19A18D1300CFBDA8 /* honglingjinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "honglingjinTests-Info.plist"; sourceTree = "<group>"; };
 		4B801CD019A18D1300CFBDA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B801CD219A18D1300CFBDA8 /* honglingjinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = honglingjinTests.m; sourceTree = "<group>"; };
-		4B801CE519A1960200CFBDA8 /* VCAdviser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCAdviser.h; sourceTree = "<group>"; };
-		4B801CE619A1960200CFBDA8 /* VCAdviser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCAdviser.m; sourceTree = "<group>"; };
-		4B801CE819A1977300CFBDA8 /* VCTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCTopic.h; sourceTree = "<group>"; };
-		4B801CE919A1977300CFBDA8 /* VCTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCTopic.m; sourceTree = "<group>"; };
-		4B801CF019A19DCA00CFBDA8 /* VCNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCNews.h; sourceTree = "<group>"; };
-		4B801CF119A19DCA00CFBDA8 /* VCNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCNews.m; sourceTree = "<group>"; };
 		4B801CF319A19E4F00CFBDA8 /* VCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCUserInfo.h; sourceTree = "<group>"; };
 		4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCUserInfo.m; sourceTree = "<group>"; };
 		4BA5CBB019A473F400B32CC0 /* chatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatVC.h; sourceTree = "<group>"; };
@@ -445,6 +445,7 @@
 				4B801CE219A194A200CFBDA8 /* 消息 */,
 				4B801CE419A194B400CFBDA8 /* 个人 */,
 				4B43F5EA19A4434200CB6BC6 /* 公共 */,
+				4B3BD22419A2F6E9009550FC /* cell */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -453,7 +454,6 @@
 			isa = PBXGroup;
 			children = (
 				4B644B7819A5A03B00DCFD49 /* info */,
-				4B3BD22419A2F6E9009550FC /* cell */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -461,8 +461,8 @@
 		4B801CDF19A1945F00CFBDA8 /* 顾问团 */ = {
 			isa = PBXGroup;
 			children = (
-				4B801CE519A1960200CFBDA8 /* VCAdviser.h */,
-				4B801CE619A1960200CFBDA8 /* VCAdviser.m */,
+				4B4AED2919AC889D000E2FA4 /* AdviserViewController.h */,
+				4B4AED2A19AC889D000E2FA4 /* AdviserViewController.m */,
 			);
 			name = "顾问团";
 			sourceTree = "<group>";
@@ -470,8 +470,8 @@
 		4B801CE019A1947500CFBDA8 /* 讨论组 */ = {
 			isa = PBXGroup;
 			children = (
-				4B801CE819A1977300CFBDA8 /* VCTopic.h */,
-				4B801CE919A1977300CFBDA8 /* VCTopic.m */,
+				4B4AED2F19ACDD66000E2FA4 /* TopicViewController.h */,
+				4B4AED3019ACDD66000E2FA4 /* TopicViewController.m */,
 			);
 			name = "讨论组";
 			sourceTree = "<group>";
@@ -479,8 +479,8 @@
 		4B801CE219A194A200CFBDA8 /* 消息 */ = {
 			isa = PBXGroup;
 			children = (
-				4B801CF019A19DCA00CFBDA8 /* VCNews.h */,
-				4B801CF119A19DCA00CFBDA8 /* VCNews.m */,
+				4B4AED2C19AC8ADD000E2FA4 /* MessageViewController.h */,
+				4B4AED2D19AC8ADD000E2FA4 /* MessageViewController.m */,
 			);
 			name = "消息";
 			sourceTree = "<group>";
@@ -650,13 +650,13 @@
 				4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */,
 				4BAB147319AB047200829309 /* welcomeVC.m in Sources */,
 				4B3BD23B19A35A2C009550FC /* MeCell.m in Sources */,
+				4B4AED3119ACDD66000E2FA4 /* TopicViewController.m in Sources */,
+				4B4AED2B19AC889D000E2FA4 /* AdviserViewController.m in Sources */,
+				4B4AED2E19AC8ADD000E2FA4 /* MessageViewController.m in Sources */,
 				4B4A9E6019A63CF30035A689 /* jobVC.m in Sources */,
-				4B801CEA19A1977300CFBDA8 /* VCTopic.m in Sources */,
 				4B801CB419A18D1200CFBDA8 /* main.m in Sources */,
 				4B644B8519A5E7C200DCFD49 /* areaView.m in Sources */,
-				4B801CE719A1960200CFBDA8 /* VCAdviser.m in Sources */,
 				4BAB147C19AB135000829309 /* loginVC.m in Sources */,
-				4B801CF219A19DCA00CFBDA8 /* VCNews.m in Sources */,
 				4B43F5E919A43B3D00CB6BC6 /* settingVC.m in Sources */,
 				4B801CB819A18D1200CFBDA8 /* XWAppDelegate.m in Sources */,
 				4B3BD23119A3565E009550FC /* editVC.m in Sources */,

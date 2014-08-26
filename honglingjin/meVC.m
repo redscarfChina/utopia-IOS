@@ -36,8 +36,8 @@
         return cell;
     }else {
     AdviserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"adviserCell1" forIndexPath:indexPath];
-        cell.beginBT.backgroundColor = [UIColor grayColor];
-        cell.beginBT.titleLabel.text = @"修改";
+        cell.beginToTalkBT.backgroundColor = [UIColor grayColor];
+        cell.beginToTalkBT.titleLabel.text = @"修改";
         return cell;
     }
 }
