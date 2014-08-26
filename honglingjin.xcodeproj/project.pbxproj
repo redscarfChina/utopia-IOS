@@ -15,6 +15,9 @@
 		4B3BD23B19A35A2C009550FC /* MeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD23A19A35A2C009550FC /* MeCell.m */; };
 		4B43F5E919A43B3D00CB6BC6 /* settingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B43F5E819A43B3D00CB6BC6 /* settingVC.m */; };
 		4B43F5ED19A443DF00CB6BC6 /* expertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B43F5EC19A443DF00CB6BC6 /* expertVC.m */; };
+		4B4A7E7819AB502F00601108 /* registerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7719AB502F00601108 /* registerVC.xib */; };
+		4B4A7E7A19AB504F00601108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7919AB504F00601108 /* Main.storyboard */; };
+		4B4A7E7C19AB511600601108 /* loginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7B19AB511600601108 /* loginVC.xib */; };
 		4B4A9E6019A63CF30035A689 /* jobVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9E5E19A63CF30035A689 /* jobVC.m */; };
 		4B4A9E6119A63CF30035A689 /* jobVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9E5F19A63CF30035A689 /* jobVC.xib */; };
 		4B4A9E6619A63F340035A689 /* interestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9E6419A63F340035A689 /* interestVC.m */; };
@@ -42,7 +45,6 @@
 		4B801CB219A18D1200CFBDA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B801CB019A18D1200CFBDA8 /* InfoPlist.strings */; };
 		4B801CB419A18D1200CFBDA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CB319A18D1200CFBDA8 /* main.m */; };
 		4B801CB819A18D1200CFBDA8 /* XWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CB719A18D1200CFBDA8 /* XWAppDelegate.m */; };
-		4B801CBB19A18D1200CFBDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B801CB919A18D1200CFBDA8 /* Main.storyboard */; };
 		4B801CC719A18D1200CFBDA8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B801CC619A18D1200CFBDA8 /* XCTest.framework */; };
 		4B801CC819A18D1200CFBDA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B801CA719A18D1200CFBDA8 /* Foundation.framework */; };
 		4B801CC919A18D1200CFBDA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B801CAB19A18D1200CFBDA8 /* UIKit.framework */; };
@@ -53,6 +55,9 @@
 		4B801CF219A19DCA00CFBDA8 /* VCNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CF119A19DCA00CFBDA8 /* VCNews.m */; };
 		4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */; };
 		4BA5CBB219A473F400B32CC0 /* chatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CBB119A473F400B32CC0 /* chatVC.m */; };
+		4BAB147319AB047200829309 /* welcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147219AB047200829309 /* welcomeVC.m */; };
+		4BAB147719AB125E00829309 /* registerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147519AB125E00829309 /* registerVC.m */; };
+		4BAB147C19AB135000829309 /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147A19AB135000829309 /* loginVC.m */; };
 		4BD50A2319A9B522001AF57D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50A2219A9B522001AF57D /* Images.xcassets */; };
 		4BD50A6619A9D904001AF57D /* educateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50A6519A9D904001AF57D /* educateView.xib */; };
 		4BD50A6919A9DC4E001AF57D /* educateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD50A6819A9DC4E001AF57D /* educateView.m */; };
@@ -86,6 +91,9 @@
 		4B43F5E819A43B3D00CB6BC6 /* settingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingVC.m; sourceTree = "<group>"; };
 		4B43F5EB19A443DF00CB6BC6 /* expertVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expertVC.h; sourceTree = "<group>"; };
 		4B43F5EC19A443DF00CB6BC6 /* expertVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expertVC.m; sourceTree = "<group>"; };
+		4B4A7E7719AB502F00601108 /* registerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = registerVC.xib; sourceTree = "<group>"; };
+		4B4A7E7919AB504F00601108 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4B4A7E7B19AB511600601108 /* loginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginVC.xib; sourceTree = "<group>"; };
 		4B4A9E5D19A63CF30035A689 /* jobVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jobVC.h; sourceTree = "<group>"; };
 		4B4A9E5E19A63CF30035A689 /* jobVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jobVC.m; sourceTree = "<group>"; };
 		4B4A9E5F19A63CF30035A689 /* jobVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = jobVC.xib; sourceTree = "<group>"; };
@@ -124,7 +132,6 @@
 		4B801CB519A18D1200CFBDA8 /* honglingjin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "honglingjin-Prefix.pch"; sourceTree = "<group>"; };
 		4B801CB619A18D1200CFBDA8 /* XWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XWAppDelegate.h; sourceTree = "<group>"; };
 		4B801CB719A18D1200CFBDA8 /* XWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XWAppDelegate.m; sourceTree = "<group>"; };
-		4B801CBA19A18D1200CFBDA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B801CC519A18D1200CFBDA8 /* honglingjinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = honglingjinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B801CC619A18D1200CFBDA8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4B801CCE19A18D1300CFBDA8 /* honglingjinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "honglingjinTests-Info.plist"; sourceTree = "<group>"; };
@@ -140,6 +147,12 @@
 		4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCUserInfo.m; sourceTree = "<group>"; };
 		4BA5CBB019A473F400B32CC0 /* chatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatVC.h; sourceTree = "<group>"; };
 		4BA5CBB119A473F400B32CC0 /* chatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatVC.m; sourceTree = "<group>"; };
+		4BAB147119AB047200829309 /* welcomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = welcomeVC.h; sourceTree = "<group>"; };
+		4BAB147219AB047200829309 /* welcomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = welcomeVC.m; sourceTree = "<group>"; };
+		4BAB147419AB125E00829309 /* registerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registerVC.h; sourceTree = "<group>"; };
+		4BAB147519AB125E00829309 /* registerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registerVC.m; sourceTree = "<group>"; };
+		4BAB147919AB135000829309 /* loginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginVC.h; sourceTree = "<group>"; };
+		4BAB147A19AB135000829309 /* loginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginVC.m; sourceTree = "<group>"; };
 		4BD50A2219A9B522001AF57D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4BD50A6519A9D904001AF57D /* educateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = educateView.xib; sourceTree = "<group>"; };
 		4BD50A6719A9DC4E001AF57D /* educateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = educateView.h; sourceTree = "<group>"; };
@@ -382,7 +395,7 @@
 		4B801CAD19A18D1200CFBDA8 /* honglingjin */ = {
 			isa = PBXGroup;
 			children = (
-				4B801CB919A18D1200CFBDA8 /* Main.storyboard */,
+				4B4A7E7919AB504F00601108 /* Main.storyboard */,
 				4B801CDC19A193C500CFBDA8 /* controller */,
 				4B801CDE19A193E300CFBDA8 /* model */,
 				4B801CB619A18D1200CFBDA8 /* XWAppDelegate.h */,
@@ -426,6 +439,7 @@
 		4B801CDC19A193C500CFBDA8 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				4BAB147019AB042900829309 /* 欢迎 */,
 				4B801CDF19A1945F00CFBDA8 /* 顾问团 */,
 				4B801CE019A1947500CFBDA8 /* 讨论组 */,
 				4B801CE219A194A200CFBDA8 /* 消息 */,
@@ -483,6 +497,37 @@
 				4B43F5E619A43B0A00CB6BC6 /* setting */,
 			);
 			name = "个人";
+			sourceTree = "<group>";
+		};
+		4BAB147019AB042900829309 /* 欢迎 */ = {
+			isa = PBXGroup;
+			children = (
+				4BAB147119AB047200829309 /* welcomeVC.h */,
+				4BAB147219AB047200829309 /* welcomeVC.m */,
+				4BAB147E19AB138800829309 /* register */,
+				4BAB147F19AB139A00829309 /* login */,
+			);
+			name = "欢迎";
+			sourceTree = "<group>";
+		};
+		4BAB147E19AB138800829309 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				4BAB147419AB125E00829309 /* registerVC.h */,
+				4BAB147519AB125E00829309 /* registerVC.m */,
+				4B4A7E7719AB502F00601108 /* registerVC.xib */,
+			);
+			name = register;
+			sourceTree = "<group>";
+		};
+		4BAB147F19AB139A00829309 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				4BAB147919AB135000829309 /* loginVC.h */,
+				4BAB147A19AB135000829309 /* loginVC.m */,
+				4B4A7E7B19AB511600601108 /* loginVC.xib */,
+			);
+			name = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,7 +615,9 @@
 				4B4A9E6719A63F340035A689 /* interestVC.xib in Resources */,
 				4BD50A6B19A9FC3F001AF57D /* boy.png in Resources */,
 				4B4A9E6D19A6404D0035A689 /* signatureVC.xib in Resources */,
+				4B4A7E7819AB502F00601108 /* registerVC.xib in Resources */,
 				4B644B9219A5E88800DCFD49 /* btn_020@2x.png in Resources */,
+				4B4A7E7C19AB511600601108 /* loginVC.xib in Resources */,
 				4B644B9419A5E88800DCFD49 /* btn_020.disable@2x.png in Resources */,
 				4B801CB219A18D1200CFBDA8 /* InfoPlist.strings in Resources */,
 				4B644B9519A5E88800DCFD49 /* btn_020.press@2x.png in Resources */,
@@ -578,8 +625,8 @@
 				4BD50A2319A9B522001AF57D /* Images.xcassets in Resources */,
 				4B644B8719A5E80300DCFD49 /* areaView.xib in Resources */,
 				4B644B9919A5E8A000DCFD49 /* ProvincesAndCities.plist in Resources */,
+				4B4A7E7A19AB504F00601108 /* Main.storyboard in Resources */,
 				4B644B9619A5E88800DCFD49 /* btn_021.press@2x.png in Resources */,
-				4B801CBB19A18D1200CFBDA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,12 +648,14 @@
 				4B4A9E6619A63F340035A689 /* interestVC.m in Sources */,
 				4B3BD23519A359AB009550FC /* meVC.m in Sources */,
 				4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */,
+				4BAB147319AB047200829309 /* welcomeVC.m in Sources */,
 				4B3BD23B19A35A2C009550FC /* MeCell.m in Sources */,
 				4B4A9E6019A63CF30035A689 /* jobVC.m in Sources */,
 				4B801CEA19A1977300CFBDA8 /* VCTopic.m in Sources */,
 				4B801CB419A18D1200CFBDA8 /* main.m in Sources */,
 				4B644B8519A5E7C200DCFD49 /* areaView.m in Sources */,
 				4B801CE719A1960200CFBDA8 /* VCAdviser.m in Sources */,
+				4BAB147C19AB135000829309 /* loginVC.m in Sources */,
 				4B801CF219A19DCA00CFBDA8 /* VCNews.m in Sources */,
 				4B43F5E919A43B3D00CB6BC6 /* settingVC.m in Sources */,
 				4B801CB819A18D1200CFBDA8 /* XWAppDelegate.m in Sources */,
@@ -615,6 +664,7 @@
 				4BD50A6919A9DC4E001AF57D /* educateView.m in Sources */,
 				4B644B9C19A5E93C00DCFD49 /* area.m in Sources */,
 				4B43F5ED19A443DF00CB6BC6 /* expertVC.m in Sources */,
+				4BAB147719AB125E00829309 /* registerVC.m in Sources */,
 				4BA5CBB219A473F400B32CC0 /* chatVC.m in Sources */,
 				4B644B7619A585C600DCFD49 /* nameVC.m in Sources */,
 				4B3BD22A19A2F819009550FC /* TopicCell.m in Sources */,
@@ -649,14 +699,6 @@
 				4B801CB119A18D1200CFBDA8 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		4B801CB919A18D1200CFBDA8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4B801CBA19A18D1200CFBDA8 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		4B801CCF19A18D1300CFBDA8 /* InfoPlist.strings */ = {

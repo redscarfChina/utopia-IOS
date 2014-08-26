@@ -23,6 +23,7 @@
 @property (nonatomic, strong) UIActionSheet *as1;
 @property (nonatomic, strong) UIActionSheet *as2;
 @property (nonatomic, strong) UIActionSheet *as3;
+@property (nonatomic, strong) NSUserDefaults *ud;
 @end
 
 @implementation editVC
