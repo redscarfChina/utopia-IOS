@@ -7,7 +7,7 @@
 //
 
 #import "NewsCell.h"
-
+#import "ChatViewController.h"
 @implementation NewsCell
 
 
@@ -17,6 +17,12 @@
         self.userIV = [[UIImageView alloc]initWithFrame:CGRectMake(20, 10, 40, 40)];
         [self.userIV setImage:[UIImage imageNamed:@"iv"]];
         [self addSubview:self.userIV];
+    }
+    //图像按钮
+    if (!self.userIVbt) {
+        self.userIVbt = [[UIButton alloc]initWithFrame:CGRectMake(20, 10, 40, 40)];
+        [self.userIV addSubview:self.userIVbt];
+        [self addSubview:self.userIVbt];
     }
     //用户昵称
     if (!self.userNameLabel) {
@@ -44,20 +50,19 @@
     }
     //再请教
     if (!self.againToTalkBT) {
-        self.againToTalkBT = [[UIButton alloc]initWithFrame:CGRectMake(263, 30, 50, 20)];
-        self.againToTalkBT.titleLabel.text = @"再请教";
+//        self.againToTalkBT = [[UIButton alloc]initWithFrame:CGRectMake(263, 30, 50, 20)];
+//        self.againToTalkBT.titleLabel.text = @"再请教";
+        self.againToTalkBT = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.againToTalkBT.frame = CGRectMake(263, 30, 50, 20);
+        [self.againToTalkBT setTitle:@"再请教" forState:(UIControlStateNormal)];
         self.againToTalkBT.titleLabel.textColor = [UIColor whiteColor];
         self.againToTalkBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.againToTalkBT.layer.cornerRadius = 10;
         self.againToTalkBT.backgroundColor = [UIColor greenColor];
         [self addSubview:self.againToTalkBT];
-        [self.againToTalkBT addTarget:self action:@selector(gotoTalkView) forControlEvents:UIControlEventTouchUpInside];
     }
 }
--(void)gotoTalkView
-{
-    //...
-}
+
 +(CGFloat)cellHeight{
     return 57;
 }

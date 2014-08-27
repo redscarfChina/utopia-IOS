@@ -1,5 +1,5 @@
 //
-//  chatVC.h
+//  settingVC.h
 //  honglingjin
 //
 //  Created by 哈豊玛奥 on 14-8-20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface chatVC : UIViewController
+@interface SettingTVC : UITableViewController
 
 @end

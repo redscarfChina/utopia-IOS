@@ -10,11 +10,13 @@
 		4B3BD22719A2F803009550FC /* AdviserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD22619A2F803009550FC /* AdviserCell.m */; };
 		4B3BD22A19A2F819009550FC /* TopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD22919A2F819009550FC /* TopicCell.m */; };
 		4B3BD22D19A2F830009550FC /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD22C19A2F830009550FC /* NewsCell.m */; };
-		4B3BD23119A3565E009550FC /* editVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD23019A3565E009550FC /* editVC.m */; };
-		4B3BD23519A359AB009550FC /* meVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD23419A359AB009550FC /* meVC.m */; };
+		4B3BD23119A3565E009550FC /* EditTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD23019A3565E009550FC /* EditTVC.m */; };
 		4B3BD23B19A35A2C009550FC /* MeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD23A19A35A2C009550FC /* MeCell.m */; };
-		4B43F5E919A43B3D00CB6BC6 /* settingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B43F5E819A43B3D00CB6BC6 /* settingVC.m */; };
-		4B43F5ED19A443DF00CB6BC6 /* expertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B43F5EC19A443DF00CB6BC6 /* expertVC.m */; };
+		4B3F7F8519AD78FA00D8DF0A /* UserHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F7F8419AD78FA00D8DF0A /* UserHomeViewController.m */; };
+		4B3F7F8819AD98BD00D8DF0A /* SendTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F7F8719AD98BD00D8DF0A /* SendTopicViewController.m */; };
+		4B3F7F8B19AD98EA00D8DF0A /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F7F8A19AD98EA00D8DF0A /* EditInfoViewController.m */; };
+		4B3F7F8E19ADA74800D8DF0A /* ExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F7F8D19ADA74800D8DF0A /* ExpertViewController.m */; };
+		4B43F5E919A43B3D00CB6BC6 /* SettingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B43F5E819A43B3D00CB6BC6 /* SettingTVC.m */; };
 		4B4A7E7819AB502F00601108 /* registerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7719AB502F00601108 /* registerVC.xib */; };
 		4B4A7E7A19AB504F00601108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7919AB504F00601108 /* Main.storyboard */; };
 		4B4A7E7C19AB511600601108 /* loginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7B19AB511600601108 /* loginVC.xib */; };
@@ -54,7 +56,7 @@
 		4B801CD119A18D1300CFBDA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B801CCF19A18D1300CFBDA8 /* InfoPlist.strings */; };
 		4B801CD319A18D1300CFBDA8 /* honglingjinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CD219A18D1300CFBDA8 /* honglingjinTests.m */; };
 		4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */; };
-		4BA5CBB219A473F400B32CC0 /* chatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CBB119A473F400B32CC0 /* chatVC.m */; };
+		4BA5CBB219A473F400B32CC0 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CBB119A473F400B32CC0 /* ChatViewController.m */; };
 		4BAB147319AB047200829309 /* welcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147219AB047200829309 /* welcomeVC.m */; };
 		4BAB147719AB125E00829309 /* registerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147519AB125E00829309 /* registerVC.m */; };
 		4BAB147C19AB135000829309 /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147A19AB135000829309 /* loginVC.m */; };
@@ -81,16 +83,20 @@
 		4B3BD22919A2F819009550FC /* TopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicCell.m; sourceTree = "<group>"; };
 		4B3BD22B19A2F830009550FC /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
 		4B3BD22C19A2F830009550FC /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
-		4B3BD22F19A3565E009550FC /* editVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editVC.h; sourceTree = "<group>"; };
-		4B3BD23019A3565E009550FC /* editVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editVC.m; sourceTree = "<group>"; };
-		4B3BD23319A359AB009550FC /* meVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meVC.h; sourceTree = "<group>"; };
-		4B3BD23419A359AB009550FC /* meVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = meVC.m; sourceTree = "<group>"; };
+		4B3BD22F19A3565E009550FC /* EditTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTVC.h; sourceTree = "<group>"; };
+		4B3BD23019A3565E009550FC /* EditTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTVC.m; sourceTree = "<group>"; };
 		4B3BD23919A35A2C009550FC /* MeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCell.h; sourceTree = "<group>"; };
 		4B3BD23A19A35A2C009550FC /* MeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeCell.m; sourceTree = "<group>"; };
-		4B43F5E719A43B3D00CB6BC6 /* settingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingVC.h; sourceTree = "<group>"; };
-		4B43F5E819A43B3D00CB6BC6 /* settingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingVC.m; sourceTree = "<group>"; };
-		4B43F5EB19A443DF00CB6BC6 /* expertVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expertVC.h; sourceTree = "<group>"; };
-		4B43F5EC19A443DF00CB6BC6 /* expertVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expertVC.m; sourceTree = "<group>"; };
+		4B3F7F8319AD78FA00D8DF0A /* UserHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHomeViewController.h; sourceTree = "<group>"; };
+		4B3F7F8419AD78FA00D8DF0A /* UserHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHomeViewController.m; sourceTree = "<group>"; };
+		4B3F7F8619AD98BD00D8DF0A /* SendTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendTopicViewController.h; sourceTree = "<group>"; };
+		4B3F7F8719AD98BD00D8DF0A /* SendTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendTopicViewController.m; sourceTree = "<group>"; };
+		4B3F7F8919AD98EA00D8DF0A /* EditInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
+		4B3F7F8A19AD98EA00D8DF0A /* EditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
+		4B3F7F8C19ADA74800D8DF0A /* ExpertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertViewController.h; sourceTree = "<group>"; };
+		4B3F7F8D19ADA74800D8DF0A /* ExpertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertViewController.m; sourceTree = "<group>"; };
+		4B43F5E719A43B3D00CB6BC6 /* SettingTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTVC.h; sourceTree = "<group>"; };
+		4B43F5E819A43B3D00CB6BC6 /* SettingTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTVC.m; sourceTree = "<group>"; };
 		4B4A7E7719AB502F00601108 /* registerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = registerVC.xib; sourceTree = "<group>"; };
 		4B4A7E7919AB504F00601108 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4B4A7E7B19AB511600601108 /* loginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginVC.xib; sourceTree = "<group>"; };
@@ -145,8 +151,8 @@
 		4B801CD219A18D1300CFBDA8 /* honglingjinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = honglingjinTests.m; sourceTree = "<group>"; };
 		4B801CF319A19E4F00CFBDA8 /* VCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCUserInfo.h; sourceTree = "<group>"; };
 		4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCUserInfo.m; sourceTree = "<group>"; };
-		4BA5CBB019A473F400B32CC0 /* chatVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatVC.h; sourceTree = "<group>"; };
-		4BA5CBB119A473F400B32CC0 /* chatVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatVC.m; sourceTree = "<group>"; };
+		4BA5CBB019A473F400B32CC0 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		4BA5CBB119A473F400B32CC0 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		4BAB147119AB047200829309 /* welcomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = welcomeVC.h; sourceTree = "<group>"; };
 		4BAB147219AB047200829309 /* welcomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = welcomeVC.m; sourceTree = "<group>"; };
 		4BAB147419AB125E00829309 /* registerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registerVC.h; sourceTree = "<group>"; };
@@ -203,8 +209,8 @@
 		4B3BD22E19A355EF009550FC /* edit */ = {
 			isa = PBXGroup;
 			children = (
-				4B3BD22F19A3565E009550FC /* editVC.h */,
-				4B3BD23019A3565E009550FC /* editVC.m */,
+				4B3BD22F19A3565E009550FC /* EditTVC.h */,
+				4B3BD23019A3565E009550FC /* EditTVC.m */,
 				4B644B7219A5852000DCFD49 /* change */,
 			);
 			name = edit;
@@ -213,8 +219,8 @@
 		4B3BD23219A3594E009550FC /* me */ = {
 			isa = PBXGroup;
 			children = (
-				4B3BD23319A359AB009550FC /* meVC.h */,
-				4B3BD23419A359AB009550FC /* meVC.m */,
+				4B3F7F8319AD78FA00D8DF0A /* UserHomeViewController.h */,
+				4B3F7F8419AD78FA00D8DF0A /* UserHomeViewController.m */,
 			);
 			name = me;
 			sourceTree = "<group>";
@@ -236,8 +242,8 @@
 		4B43F5E619A43B0A00CB6BC6 /* setting */ = {
 			isa = PBXGroup;
 			children = (
-				4B43F5E719A43B3D00CB6BC6 /* settingVC.h */,
-				4B43F5E819A43B3D00CB6BC6 /* settingVC.m */,
+				4B43F5E719A43B3D00CB6BC6 /* SettingTVC.h */,
+				4B43F5E819A43B3D00CB6BC6 /* SettingTVC.m */,
 			);
 			name = setting;
 			sourceTree = "<group>";
@@ -245,10 +251,14 @@
 		4B43F5EA19A4434200CB6BC6 /* 公共 */ = {
 			isa = PBXGroup;
 			children = (
-				4B43F5EB19A443DF00CB6BC6 /* expertVC.h */,
-				4B43F5EC19A443DF00CB6BC6 /* expertVC.m */,
-				4BA5CBB019A473F400B32CC0 /* chatVC.h */,
-				4BA5CBB119A473F400B32CC0 /* chatVC.m */,
+				4B3F7F8C19ADA74800D8DF0A /* ExpertViewController.h */,
+				4B3F7F8D19ADA74800D8DF0A /* ExpertViewController.m */,
+				4BA5CBB019A473F400B32CC0 /* ChatViewController.h */,
+				4BA5CBB119A473F400B32CC0 /* ChatViewController.m */,
+				4B3F7F8619AD98BD00D8DF0A /* SendTopicViewController.h */,
+				4B3F7F8719AD98BD00D8DF0A /* SendTopicViewController.m */,
+				4B3F7F8919AD98EA00D8DF0A /* EditInfoViewController.h */,
+				4B3F7F8A19AD98EA00D8DF0A /* EditInfoViewController.m */,
 			);
 			name = "公共";
 			sourceTree = "<group>";
@@ -646,7 +656,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4A9E6619A63F340035A689 /* interestVC.m in Sources */,
-				4B3BD23519A359AB009550FC /* meVC.m in Sources */,
 				4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */,
 				4BAB147319AB047200829309 /* welcomeVC.m in Sources */,
 				4B3BD23B19A35A2C009550FC /* MeCell.m in Sources */,
@@ -656,18 +665,21 @@
 				4B4A9E6019A63CF30035A689 /* jobVC.m in Sources */,
 				4B801CB419A18D1200CFBDA8 /* main.m in Sources */,
 				4B644B8519A5E7C200DCFD49 /* areaView.m in Sources */,
+				4B3F7F8B19AD98EA00D8DF0A /* EditInfoViewController.m in Sources */,
 				4BAB147C19AB135000829309 /* loginVC.m in Sources */,
-				4B43F5E919A43B3D00CB6BC6 /* settingVC.m in Sources */,
+				4B43F5E919A43B3D00CB6BC6 /* SettingTVC.m in Sources */,
 				4B801CB819A18D1200CFBDA8 /* XWAppDelegate.m in Sources */,
-				4B3BD23119A3565E009550FC /* editVC.m in Sources */,
+				4B3BD23119A3565E009550FC /* EditTVC.m in Sources */,
 				4B3BD22719A2F803009550FC /* AdviserCell.m in Sources */,
 				4BD50A6919A9DC4E001AF57D /* educateView.m in Sources */,
 				4B644B9C19A5E93C00DCFD49 /* area.m in Sources */,
-				4B43F5ED19A443DF00CB6BC6 /* expertVC.m in Sources */,
 				4BAB147719AB125E00829309 /* registerVC.m in Sources */,
-				4BA5CBB219A473F400B32CC0 /* chatVC.m in Sources */,
+				4B3F7F8819AD98BD00D8DF0A /* SendTopicViewController.m in Sources */,
+				4BA5CBB219A473F400B32CC0 /* ChatViewController.m in Sources */,
 				4B644B7619A585C600DCFD49 /* nameVC.m in Sources */,
+				4B3F7F8E19ADA74800D8DF0A /* ExpertViewController.m in Sources */,
 				4B3BD22A19A2F819009550FC /* TopicCell.m in Sources */,
+				4B3F7F8519AD78FA00D8DF0A /* UserHomeViewController.m in Sources */,
 				4B4A9E6C19A6404D0035A689 /* signatureVC.m in Sources */,
 				4B3BD22D19A2F830009550FC /* NewsCell.m in Sources */,
 				4B644B7B19A5A06800DCFD49 /* userInfo.m in Sources */,

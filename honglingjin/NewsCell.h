@@ -11,6 +11,7 @@
 @interface NewsCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *userIV;
+@property (nonatomic, strong) UIButton *userIVbt;
 @property (nonatomic, strong) UILabel *userNameLabel;
 @property (nonatomic, strong) UILabel *introduceLabel;
 @property (nonatomic, strong) UILabel *stateLabel;

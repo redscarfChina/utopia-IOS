@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 RedScarf. All rights reserved.
 //
 
-#import "editVC.h"
+#import "EditTVC.h"
 #import "userInfo.h"
 #import "nameVC.h"
 #import "areaView.h"
@@ -14,7 +14,7 @@
 #import "jobVC.h"
 #import "interestVC.h"
 #import "signatureVC.h"
-@interface editVC ()
+@interface EditTVC ()
 @property (nonatomic, strong) userInfo *user;
 @property (nonatomic, strong) nameVC *vc1;
 @property (nonatomic, strong) jobVC *vc2;
@@ -26,7 +26,7 @@
 @property (nonatomic, strong) NSUserDefaults *ud;
 @end
 
-@implementation editVC
+@implementation EditTVC
 
 - (void)viewDidLoad
 {

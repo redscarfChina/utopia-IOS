@@ -1,13 +1,13 @@
 //
-//  meVC.h
+//  chatVC.h
 //  honglingjin
 //
-//  Created by 哈豊玛奥 on 14-8-19.
+//  Created by 哈豊玛奥 on 14-8-20.
 //  Copyright (c) 2014年 RedScarf. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface meVC : UITableViewController
+@interface ChatViewController : UIViewController
 
 @end

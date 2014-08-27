@@ -11,7 +11,7 @@
 #import "jobVC.h"
 #import "interestVC.h"
 #import "signatureVC.h"
-@interface editVC : UITableViewController<nameVCDelegate,jobVCDelegate,interestVCDelegate,signatureVCDelegate,UIActionSheetDelegate>
+@interface EditTVC : UITableViewController<nameVCDelegate,jobVCDelegate,interestVCDelegate,signatureVCDelegate,UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end

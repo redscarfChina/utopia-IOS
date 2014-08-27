@@ -60,20 +60,19 @@ static NSString *CellIdentifier = @"CellIdentifier";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NewsCell *cell = [[NewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell createContentInCell];
+    [cell.userIVbt addTarget:self action:@selector(gotoExpertView) forControlEvents:UIControlEventTouchUpInside];
+    [cell.againToTalkBT addTarget:self action:@selector(againToTalkView) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)gotoExpertView
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self performSegueWithIdentifier:@"gotoExpertView3" sender:self];
 }
-*/
+-(void)againToTalkView
+{
+    [self performSegueWithIdentifier:@"againToTalkView" sender:self];
+}
 
 @end

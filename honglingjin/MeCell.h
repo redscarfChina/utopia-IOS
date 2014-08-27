@@ -9,11 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface MeCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *iv;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *doneLabel;
-@property (weak, nonatomic) IBOutlet UILabel *satisfactionLabel;
-@property (weak, nonatomic) IBOutlet UILabel *starLabel;
-@property (weak, nonatomic) IBOutlet UIButton *writeBT;
 
+@property (nonatomic, strong) UIImageView *userIV;
+@property (nonatomic, strong) UILabel *userNameLabel;
+@property (nonatomic, strong) UILabel *doneLabel;
+@property (nonatomic, strong) UILabel *doneNumLabel;
+@property (nonatomic, strong) UILabel *satisfactionLabel;
+@property (nonatomic, strong) UILabel *satisfactionNumLabel;
+@property (nonatomic, strong) UILabel *starLabel;
+@property (nonatomic, strong) UILabel *starNumLabel;
+@property (nonatomic, strong) UIButton *writeTopicBT;
+
+-(void)createContentInCell;
++(CGFloat)cellHeight;
 @end

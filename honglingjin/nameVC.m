@@ -8,10 +8,10 @@
 
 #import "nameVC.h"
 #import "userInfo.h"
-#import "editVC.h"
+#import "EditTVC.h"
 @interface nameVC ()
 @property (nonatomic, strong) userInfo *user;
-@property (nonatomic, strong) editVC *TVC;
+@property (nonatomic, strong) EditTVC *TVC;
 @end
 
 @implementation nameVC

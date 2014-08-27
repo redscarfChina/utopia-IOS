@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 RedScarf. All rights reserved.
 //
 
-#import "settingVC.h"
+#import "SettingTVC.h"
 
-@interface settingVC ()
+@interface SettingTVC ()
 
 @end
 
-@implementation settingVC
+@implementation SettingTVC
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

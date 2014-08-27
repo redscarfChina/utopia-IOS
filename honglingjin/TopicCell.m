@@ -34,17 +34,22 @@
         [self.userIV setImage:[UIImage imageNamed:@"iv"]];
         [self addSubview:self.userIV];
     }
-    
+    //图像按钮
+    if (!self.userIVbt) {
+        self.userIVbt = [[UIButton alloc]initWithFrame:CGRectMake(15, 70, 40, 40)];
+        [self.userIV addSubview:self.userIVbt];
+        [self addSubview:self.userIVbt];
+    }
     //加入他们
     if (!self.joinToTalkBT) {
-        self.joinToTalkBT = [[UIButton alloc]initWithFrame:CGRectMake(250, 10, 55, 25)];
-        self.joinToTalkBT.titleLabel.text = @"加入他们";
+        self.joinToTalkBT = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.joinToTalkBT.frame = CGRectMake(250, 10, 55, 25);
+        [self.joinToTalkBT setTitle:@"加入他们" forState:(UIControlStateNormal)];
         self.joinToTalkBT.titleLabel.textColor = [UIColor whiteColor];
         self.joinToTalkBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.joinToTalkBT.layer.cornerRadius = 10;
         self.joinToTalkBT.backgroundColor = [UIColor greenColor];
         [self addSubview:self.joinToTalkBT];
-        [self.joinToTalkBT addTarget:self action:@selector(joinToTalkView) forControlEvents:UIControlEventTouchUpInside];
     }
     //交流属性
     if (!self.attributeLabel) {
@@ -64,10 +69,6 @@
         self.topicNumLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.topicNumLabel];
     }
-}
--(void)joinToTalkView
-{
-    //...
 }
 
 +(CGFloat)cellHeight{

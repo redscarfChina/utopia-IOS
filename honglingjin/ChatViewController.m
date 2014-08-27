@@ -6,15 +6,15 @@
 //  Copyright (c) 2014年 RedScarf. All rights reserved.
 //
 
-#import "chatVC.h"
+#import "ChatViewController.h"
 
-@interface chatVC ()
+@interface ChatViewController ()
 @property (weak, nonatomic) IBOutlet UIView *inputBoxView;
 @property (weak, nonatomic) IBOutlet UITextField *inputTF;
 
 @end
 
-@implementation chatVC
+@implementation ChatViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UILabel *topicLabel;
 @property (nonatomic, strong) UILabel *userNameLabel;
 @property (nonatomic, strong) UIImageView *userIV;
+@property (nonatomic, strong) UIButton *userIVbt;
 @property (nonatomic, strong) UIButton *joinToTalkBT;
 @property (nonatomic, strong) UILabel *attributeLabel;
 @property (nonatomic, strong) UILabel *topicNumLabel;

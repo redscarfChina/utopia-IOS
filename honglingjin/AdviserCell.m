@@ -16,7 +16,14 @@
     if (!self.userIV) {
         self.userIV = [[UIImageView alloc]initWithFrame:CGRectMake(15, 5, 40, 40)];
         [self.userIV setImage:[UIImage imageNamed:@"iv"]];
+//        [self.userIV addSubview:self.userIVbt];
         [self addSubview:self.userIV];
+    }
+    //图像按钮
+    if (!self.userIVbt) {
+        self.userIVbt = [[UIButton alloc]initWithFrame:CGRectMake(15, 5, 40, 40)];
+        [self.userIV addSubview:self.userIVbt];
+        [self addSubview:self.userIVbt];
     }
     //用户昵称
     if (!self.userNameLabel) {
@@ -35,14 +42,14 @@
     }
     //向他请教
     if (!self.beginToTalkBT) {
-        self.beginToTalkBT = [[UIButton alloc]initWithFrame:CGRectMake(250, 10, 55, 25)];
-        self.beginToTalkBT.titleLabel.text = @"向他请教";
+        self.beginToTalkBT = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.beginToTalkBT.frame = CGRectMake(250, 10, 55, 25);
+        [self.beginToTalkBT setTitle:@"向他请教" forState:(UIControlStateNormal)];
         self.beginToTalkBT.titleLabel.textColor = [UIColor whiteColor];
         self.beginToTalkBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.beginToTalkBT.layer.cornerRadius = 10;
         self.beginToTalkBT.backgroundColor = [UIColor greenColor];
         [self addSubview:self.beginToTalkBT];
-        [self.beginToTalkBT addTarget:self action:@selector(gotoTalkView) forControlEvents:UIControlEventTouchUpInside];
     }
     //交流属性
     if (!self.attributeLabel) {
@@ -73,22 +80,14 @@
     }
     //查看评论
     if (!self.checkCommentBT) {
-        self.checkCommentBT = [[UIButton alloc]initWithFrame:CGRectMake(220, 100, 90, 30)];
-        self.checkCommentBT.titleLabel.text = @"查看所有评论";
-        self.checkCommentBT.titleLabel.textColor = [UIColor blueColor];
-        self.checkCommentBT.backgroundColor = [UIColor redColor];
-        [self.checkCommentBT addTarget:self action:@selector(gotoCommentView) forControlEvents:UIControlEventTouchUpInside];
+        self.checkCommentBT = [UIButton buttonWithType:UIButtonTypeSystem];
+        self.checkCommentBT.frame = CGRectMake(220, 105, 90, 30);
+        [self.checkCommentBT setTitle:@"查看所有评论" forState:(UIControlStateNormal)];
+        self.checkCommentBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         [self addSubview:self.checkCommentBT];
     }
 }
--(void)gotoTalkView
-{
-    //...
-}
--(void)gotoCommentView
-{
-    //...
-}
+
 +(CGFloat)cellHeight{
     return 140;
 }
