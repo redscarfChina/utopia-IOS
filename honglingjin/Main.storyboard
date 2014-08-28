@@ -4,47 +4,21 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--WelcomeVC - 欢迎界面-->
+        <!--Welcome View Controller - 欢迎界面-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="welcome" id="vXZ-lx-hvc" customClass="welcomeVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="vXZ-lx-hvc" customClass="WelcomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wRJ-Ek-Web">
-                                <rect key="frame" x="126" y="231" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="注册">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="registerBT:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="w3Z-90-2w3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j8L-WH-TcE">
-                                <rect key="frame" x="126" y="300" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="登陆">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginBT:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rTD-HS-8fe"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="TUy-lX-7yb"/>
                     <navigationItem key="navigationItem" title="欢迎界面" id="9of-Vk-hJ7"/>
-                    <connections>
-                        <outlet property="loginBT" destination="j8L-WH-TcE" id="Qwe-GI-ON3"/>
-                        <outlet property="registerBT" destination="wRJ-Ek-Web" id="mD7-gR-Kdd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9794" y="-2853"/>
+            <point key="canvasLocation" x="-9754" y="-2877"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ifs-Oa-Kji">
@@ -412,7 +386,7 @@
         <!--User Home View Controller-->
         <scene sceneID="QcP-Is-5GK">
             <objects>
-                <viewController id="yoQ-AP-aoG" customClass="UserHomeViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="yoQ-AP-aoG" customClass="UserHomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eoM-hE-3ne">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -422,6 +396,7 @@
                     <connections>
                         <segue destination="dG4-6K-QNB" kind="push" identifier="editInfoView" id="Fdz-Hf-Myz"/>
                         <segue destination="RvA-BV-sqh" kind="push" identifier="sendTopicView" id="Vog-GL-DuT"/>
+                        <segue destination="tm8-bN-rbK" kind="push" identifier="userHomeVCToCommentVC" id="91d-tH-Qg4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PyD-ey-5N4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -689,6 +664,7 @@
                     <connections>
                         <segue destination="dJA-Uy-n58" kind="push" identifier="beginToTalkView" id="LLs-uz-cjt"/>
                         <segue destination="gzf-W8-RTT" kind="push" identifier="gotoExpertView1" id="KYW-Mm-3lW"/>
+                        <segue destination="tm8-bN-rbK" kind="push" identifier="adviserVCToCommentList" id="tcM-Fa-8dZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZC-zb-nH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -698,7 +674,7 @@
         <!--Expert View Controller-->
         <scene sceneID="YYf-hS-EVN">
             <objects>
-                <viewController id="gzf-W8-RTT" customClass="ExpertViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="gzf-W8-RTT" customClass="ExpertViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u9Z-7K-ZgY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -707,11 +683,12 @@
                     <navigationItem key="navigationItem" id="ndM-5f-w4w"/>
                     <connections>
                         <segue destination="dJA-Uy-n58" kind="push" identifier="goToTalkView" id="aaU-bx-VRT"/>
+                        <segue destination="tm8-bN-rbK" kind="push" identifier="expertVCToCommentVC" id="57V-vR-K25"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7V-AB-IgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4890" y="-4795"/>
+            <point key="canvasLocation" x="-6210" y="-4795"/>
         </scene>
         <!--Chat View Controller - 聊天-->
         <scene sceneID="sLS-aq-BUp">
@@ -788,7 +765,22 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-4890" y="-2853"/>
+            <point key="canvasLocation" x="-6210" y="-2853"/>
+        </scene>
+        <!--Comment List View Controller-->
+        <scene sceneID="M95-WI-qCr">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="tm8-bN-rbK" customClass="CommentListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w6n-Mh-JqV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mQU-lc-AYe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vy2-p5-nal" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5263" y="-2891"/>
         </scene>
         <!--Send Topic View Controller-->
         <scene sceneID="gKm-Lt-dAk">
@@ -803,7 +795,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGz-wV-2JG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5604" y="-1760"/>
+            <point key="canvasLocation" x="-5844" y="-1472"/>
         </scene>
         <!--Edit Info View Controller-->
         <scene sceneID="sBz-TG-Ye4">
@@ -818,7 +810,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koW-Ic-cr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5580" y="-828"/>
+            <point key="canvasLocation" x="-5820" y="-540"/>
         </scene>
     </scenes>
     <resources>
@@ -838,7 +830,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="KYW-Mm-3lW"/>
-        <segue reference="aaU-bx-VRT"/>
+        <segue reference="3Ti-BM-g6k"/>
+        <segue reference="KsM-lr-0qQ"/>
+        <segue reference="91d-tH-Qg4"/>
     </inferredMetricsTieBreakers>
 </document>

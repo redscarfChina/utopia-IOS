@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TopicViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-@property (strong,nonatomic)UITableView *topicTV;
-
+@interface TopicViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+@property (nonatomic, strong)UITableView *topicTV;
+@property (nonatomic, strong)  UITextField *searchTF2;
 @end

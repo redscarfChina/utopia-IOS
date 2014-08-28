@@ -48,7 +48,7 @@
         self.beginToTalkBT.titleLabel.textColor = [UIColor whiteColor];
         self.beginToTalkBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.beginToTalkBT.layer.cornerRadius = 10;
-        self.beginToTalkBT.backgroundColor = [UIColor greenColor];
+        [self.beginToTalkBT setBackgroundImage:[UIImage imageNamed:@"BTbkg"] forState:UIControlStateNormal];
         [self addSubview:self.beginToTalkBT];
     }
     //交流属性

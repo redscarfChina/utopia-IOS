@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MessageViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-@property (strong,nonatomic)UITableView *messageTV;
+@property (nonatomic, strong)UITableView *messageTV;
+@property (nonatomic, strong)UISegmentedControl *sc;
 @end

@@ -7,21 +7,21 @@
 //
 
 #import "XWAppDelegate.h"
-#import "welcomeVC.h"
+#import "WelcomeViewController.h"
 @implementation XWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UINavigationBar appearance]setBackgroundImage:[UIImage imageNamed:@"bkg"] forBarMetrics:UIBarMetricsDefault];
-    [[UITabBar appearance]setBackgroundImage:[UIImage imageNamed:@"bkg"]];
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    int i = [[ud objectForKey:@"times"]intValue];
-    if (!i) {
-        welcomeVC *wvc = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"welcome"];
+    [[UINavigationBar appearance]setBackgroundImage:[UIImage imageNamed:@"BTbkg"] forBarMetrics:UIBarMetricsDefault];
+    [[UITabBar appearance]setBackgroundImage:[UIImage imageNamed:@"BTbkg"]];
+//    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+//    int i = [[ud objectForKey:@"times"]intValue];
+//    if (!i) {
+        WelcomeViewController *wvc = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
         self.window.rootViewController = wvc;
-    }
-    [ud setObject:[NSNumber numberWithInt:++i] forKey:@"times"];
-    [ud synchronize];
+//    }
+//    [ud setObject:[NSNumber numberWithInt:++i] forKey:@"times"];
+//    [ud synchronize];
     return YES;
 }
 							

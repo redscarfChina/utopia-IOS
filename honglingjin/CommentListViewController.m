@@ -1,23 +1,32 @@
 //
-//  editInfoVC.m
+//  CommentListViewController.m
 //  honglingjin
 //
 //  Created by 哈豊玛奥 on 14-8-27.
 //  Copyright (c) 2014年 RedScarf. All rights reserved.
 //
 
-#import "EditInfoViewController.h"
+#import "CommentListViewController.h"
 
-@interface EditInfoViewController ()
+@interface CommentListViewController ()
 
 @end
 
-@implementation EditInfoViewController
+@implementation CommentListViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"编辑信息";
+    self.title = @"评论列表";
 }
 
 - (void)didReceiveMemoryWarning

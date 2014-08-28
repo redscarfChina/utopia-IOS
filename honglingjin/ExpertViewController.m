@@ -21,11 +21,13 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.tabBarController.tabBar.hidden = YES;
     }
     return self;
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -81,6 +83,7 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
         [cell.beginToTalkBT setTitle:@"收藏一下" forState:(UIControlStateNormal)];
         cell.beginToTalkBT.backgroundColor = [UIColor lightGrayColor];
         [cell.beginToTalkBT addTarget:self action:@selector(storeUserInfo) forControlEvents:UIControlEventTouchUpInside];
+        [cell.checkCommentBT addTarget:self action:@selector(gotoCommentListView) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
 }
@@ -93,5 +96,9 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
 {
     UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"收藏用户" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [av show];
+}
+-(void)gotoCommentListView
+{
+    [self performSegueWithIdentifier:@"expertVCToCommentVC" sender:self];
 }
 @end

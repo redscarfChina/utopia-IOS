@@ -58,7 +58,7 @@
         self.againToTalkBT.titleLabel.textColor = [UIColor whiteColor];
         self.againToTalkBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.againToTalkBT.layer.cornerRadius = 10;
-        self.againToTalkBT.backgroundColor = [UIColor greenColor];
+        [self.againToTalkBT setBackgroundImage:[UIImage imageNamed:@"BTbkg"] forState:UIControlStateNormal];
         [self addSubview:self.againToTalkBT];
     }
 }

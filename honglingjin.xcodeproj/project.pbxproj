@@ -16,10 +16,9 @@
 		4B3F7F8819AD98BD00D8DF0A /* SendTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F7F8719AD98BD00D8DF0A /* SendTopicViewController.m */; };
 		4B3F7F8B19AD98EA00D8DF0A /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F7F8A19AD98EA00D8DF0A /* EditInfoViewController.m */; };
 		4B3F7F8E19ADA74800D8DF0A /* ExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F7F8D19ADA74800D8DF0A /* ExpertViewController.m */; };
+		4B3F7FD819ADE61E00D8DF0A /* CommentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F7FD719ADE61E00D8DF0A /* CommentListViewController.m */; };
 		4B43F5E919A43B3D00CB6BC6 /* SettingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B43F5E819A43B3D00CB6BC6 /* SettingTVC.m */; };
-		4B4A7E7819AB502F00601108 /* registerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7719AB502F00601108 /* registerVC.xib */; };
 		4B4A7E7A19AB504F00601108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7919AB504F00601108 /* Main.storyboard */; };
-		4B4A7E7C19AB511600601108 /* loginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7B19AB511600601108 /* loginVC.xib */; };
 		4B4A9E6019A63CF30035A689 /* jobVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9E5E19A63CF30035A689 /* jobVC.m */; };
 		4B4A9E6119A63CF30035A689 /* jobVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9E5F19A63CF30035A689 /* jobVC.xib */; };
 		4B4A9E6619A63F340035A689 /* interestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9E6419A63F340035A689 /* interestVC.m */; };
@@ -29,6 +28,14 @@
 		4B4AED2B19AC889D000E2FA4 /* AdviserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED2A19AC889D000E2FA4 /* AdviserViewController.m */; };
 		4B4AED2E19AC8ADD000E2FA4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED2D19AC8ADD000E2FA4 /* MessageViewController.m */; };
 		4B4AED3119ACDD66000E2FA4 /* TopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED3019ACDD66000E2FA4 /* TopicViewController.m */; };
+		4B5B577619AED268008BE308 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B577519AED268008BE308 /* WelcomeViewController.m */; };
+		4B5B577919AED395008BE308 /* welcomebkgImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B577719AED395008BE308 /* welcomebkgImage.png */; };
+		4B5B577A19AED395008BE308 /* welcomeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B577819AED395008BE308 /* welcomeImage.png */; };
+		4B5B577C19AED5D1008BE308 /* inputbkgImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B577B19AED5D1008BE308 /* inputbkgImage.png */; };
+		4B5B577F19AED9E6008BE308 /* usernameImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B577D19AED9E6008BE308 /* usernameImage.png */; };
+		4B5B578019AED9E6008BE308 /* passwordImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B577E19AED9E6008BE308 /* passwordImage.png */; };
+		4B5B578619AEE7AF008BE308 /* BTbkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B578519AEE7AF008BE308 /* BTbkg.png */; };
+		4B5B578819AEF75B008BE308 /* findpasswordbkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B578719AEF75B008BE308 /* findpasswordbkg.png */; };
 		4B644B7619A585C600DCFD49 /* nameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B644B7419A585C600DCFD49 /* nameVC.m */; };
 		4B644B7719A585C600DCFD49 /* nameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B644B7519A585C600DCFD49 /* nameVC.xib */; };
 		4B644B7B19A5A06800DCFD49 /* userInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B644B7A19A5A06800DCFD49 /* userInfo.m */; };
@@ -57,9 +64,6 @@
 		4B801CD319A18D1300CFBDA8 /* honglingjinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CD219A18D1300CFBDA8 /* honglingjinTests.m */; };
 		4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */; };
 		4BA5CBB219A473F400B32CC0 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CBB119A473F400B32CC0 /* ChatViewController.m */; };
-		4BAB147319AB047200829309 /* welcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147219AB047200829309 /* welcomeVC.m */; };
-		4BAB147719AB125E00829309 /* registerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147519AB125E00829309 /* registerVC.m */; };
-		4BAB147C19AB135000829309 /* loginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB147A19AB135000829309 /* loginVC.m */; };
 		4BD50A2319A9B522001AF57D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50A2219A9B522001AF57D /* Images.xcassets */; };
 		4BD50A6619A9D904001AF57D /* educateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50A6519A9D904001AF57D /* educateView.xib */; };
 		4BD50A6919A9DC4E001AF57D /* educateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD50A6819A9DC4E001AF57D /* educateView.m */; };
@@ -95,11 +99,11 @@
 		4B3F7F8A19AD98EA00D8DF0A /* EditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
 		4B3F7F8C19ADA74800D8DF0A /* ExpertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertViewController.h; sourceTree = "<group>"; };
 		4B3F7F8D19ADA74800D8DF0A /* ExpertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertViewController.m; sourceTree = "<group>"; };
+		4B3F7FD619ADE61E00D8DF0A /* CommentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentListViewController.h; sourceTree = "<group>"; };
+		4B3F7FD719ADE61E00D8DF0A /* CommentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentListViewController.m; sourceTree = "<group>"; };
 		4B43F5E719A43B3D00CB6BC6 /* SettingTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTVC.h; sourceTree = "<group>"; };
 		4B43F5E819A43B3D00CB6BC6 /* SettingTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTVC.m; sourceTree = "<group>"; };
-		4B4A7E7719AB502F00601108 /* registerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = registerVC.xib; sourceTree = "<group>"; };
 		4B4A7E7919AB504F00601108 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4B4A7E7B19AB511600601108 /* loginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginVC.xib; sourceTree = "<group>"; };
 		4B4A9E5D19A63CF30035A689 /* jobVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jobVC.h; sourceTree = "<group>"; };
 		4B4A9E5E19A63CF30035A689 /* jobVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jobVC.m; sourceTree = "<group>"; };
 		4B4A9E5F19A63CF30035A689 /* jobVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = jobVC.xib; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 		4B4AED2D19AC8ADD000E2FA4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		4B4AED2F19ACDD66000E2FA4 /* TopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicViewController.h; sourceTree = "<group>"; };
 		4B4AED3019ACDD66000E2FA4 /* TopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicViewController.m; sourceTree = "<group>"; };
+		4B5B577419AED268008BE308 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		4B5B577519AED268008BE308 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		4B5B577719AED395008BE308 /* welcomebkgImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomebkgImage.png; sourceTree = "<group>"; };
+		4B5B577819AED395008BE308 /* welcomeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomeImage.png; sourceTree = "<group>"; };
+		4B5B577B19AED5D1008BE308 /* inputbkgImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inputbkgImage.png; sourceTree = "<group>"; };
+		4B5B577D19AED9E6008BE308 /* usernameImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usernameImage.png; sourceTree = "<group>"; };
+		4B5B577E19AED9E6008BE308 /* passwordImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passwordImage.png; sourceTree = "<group>"; };
+		4B5B578519AEE7AF008BE308 /* BTbkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTbkg.png; sourceTree = "<group>"; };
+		4B5B578719AEF75B008BE308 /* findpasswordbkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findpasswordbkg.png; sourceTree = "<group>"; };
 		4B644B7319A585C600DCFD49 /* nameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nameVC.h; sourceTree = "<group>"; };
 		4B644B7419A585C600DCFD49 /* nameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nameVC.m; sourceTree = "<group>"; };
 		4B644B7519A585C600DCFD49 /* nameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nameVC.xib; sourceTree = "<group>"; };
@@ -153,12 +166,6 @@
 		4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCUserInfo.m; sourceTree = "<group>"; };
 		4BA5CBB019A473F400B32CC0 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		4BA5CBB119A473F400B32CC0 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
-		4BAB147119AB047200829309 /* welcomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = welcomeVC.h; sourceTree = "<group>"; };
-		4BAB147219AB047200829309 /* welcomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = welcomeVC.m; sourceTree = "<group>"; };
-		4BAB147419AB125E00829309 /* registerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registerVC.h; sourceTree = "<group>"; };
-		4BAB147519AB125E00829309 /* registerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registerVC.m; sourceTree = "<group>"; };
-		4BAB147919AB135000829309 /* loginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginVC.h; sourceTree = "<group>"; };
-		4BAB147A19AB135000829309 /* loginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginVC.m; sourceTree = "<group>"; };
 		4BD50A2219A9B522001AF57D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4BD50A6519A9D904001AF57D /* educateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = educateView.xib; sourceTree = "<group>"; };
 		4BD50A6719A9DC4E001AF57D /* educateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = educateView.h; sourceTree = "<group>"; };
@@ -259,6 +266,8 @@
 				4B3F7F8719AD98BD00D8DF0A /* SendTopicViewController.m */,
 				4B3F7F8919AD98EA00D8DF0A /* EditInfoViewController.h */,
 				4B3F7F8A19AD98EA00D8DF0A /* EditInfoViewController.m */,
+				4B3F7FD619ADE61E00D8DF0A /* CommentListViewController.h */,
+				4B3F7FD719ADE61E00D8DF0A /* CommentListViewController.m */,
 			);
 			name = "公共";
 			sourceTree = "<group>";
@@ -291,6 +300,20 @@
 				4B4A9E6B19A6404D0035A689 /* signatureVC.xib */,
 			);
 			name = signature;
+			sourceTree = "<group>";
+		};
+		4B5B578B19AF10E6008BE308 /* welcomePicture */ = {
+			isa = PBXGroup;
+			children = (
+				4B5B577719AED395008BE308 /* welcomebkgImage.png */,
+				4B5B577819AED395008BE308 /* welcomeImage.png */,
+				4B5B577B19AED5D1008BE308 /* inputbkgImage.png */,
+				4B5B577D19AED9E6008BE308 /* usernameImage.png */,
+				4B5B577E19AED9E6008BE308 /* passwordImage.png */,
+				4B5B578519AEE7AF008BE308 /* BTbkg.png */,
+				4B5B578719AEF75B008BE308 /* findpasswordbkg.png */,
+			);
+			name = welcomePicture;
 			sourceTree = "<group>";
 		};
 		4B644B7219A5852000DCFD49 /* change */ = {
@@ -412,6 +435,7 @@
 				4B801CB719A18D1200CFBDA8 /* XWAppDelegate.m */,
 				4B801CAE19A18D1200CFBDA8 /* Supporting Files */,
 				4BD50A2219A9B522001AF57D /* Images.xcassets */,
+				4B5B578B19AF10E6008BE308 /* welcomePicture */,
 				4BD50A6A19A9FC3F001AF57D /* boy.png */,
 			);
 			path = honglingjin;
@@ -512,32 +536,10 @@
 		4BAB147019AB042900829309 /* 欢迎 */ = {
 			isa = PBXGroup;
 			children = (
-				4BAB147119AB047200829309 /* welcomeVC.h */,
-				4BAB147219AB047200829309 /* welcomeVC.m */,
-				4BAB147E19AB138800829309 /* register */,
-				4BAB147F19AB139A00829309 /* login */,
+				4B5B577419AED268008BE308 /* WelcomeViewController.h */,
+				4B5B577519AED268008BE308 /* WelcomeViewController.m */,
 			);
 			name = "欢迎";
-			sourceTree = "<group>";
-		};
-		4BAB147E19AB138800829309 /* register */ = {
-			isa = PBXGroup;
-			children = (
-				4BAB147419AB125E00829309 /* registerVC.h */,
-				4BAB147519AB125E00829309 /* registerVC.m */,
-				4B4A7E7719AB502F00601108 /* registerVC.xib */,
-			);
-			name = register;
-			sourceTree = "<group>";
-		};
-		4BAB147F19AB139A00829309 /* login */ = {
-			isa = PBXGroup;
-			children = (
-				4BAB147919AB135000829309 /* loginVC.h */,
-				4BAB147A19AB135000829309 /* loginVC.m */,
-				4B4A7E7B19AB511600601108 /* loginVC.xib */,
-			);
-			name = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -620,23 +622,28 @@
 				4B4A9E6119A63CF30035A689 /* jobVC.xib in Resources */,
 				4B644B9719A5E88800DCFD49 /* btn_021@2x.png in Resources */,
 				4B644B9119A5E88800DCFD49 /* bg_023@2x.png in Resources */,
+				4B5B578019AED9E6008BE308 /* passwordImage.png in Resources */,
 				4B644B7719A585C600DCFD49 /* nameVC.xib in Resources */,
+				4B5B577A19AED395008BE308 /* welcomeImage.png in Resources */,
 				4B644B9319A5E88800DCFD49 /* btn_021.disable@2x.png in Resources */,
 				4B4A9E6719A63F340035A689 /* interestVC.xib in Resources */,
 				4BD50A6B19A9FC3F001AF57D /* boy.png in Resources */,
 				4B4A9E6D19A6404D0035A689 /* signatureVC.xib in Resources */,
-				4B4A7E7819AB502F00601108 /* registerVC.xib in Resources */,
 				4B644B9219A5E88800DCFD49 /* btn_020@2x.png in Resources */,
-				4B4A7E7C19AB511600601108 /* loginVC.xib in Resources */,
 				4B644B9419A5E88800DCFD49 /* btn_020.disable@2x.png in Resources */,
+				4B5B578619AEE7AF008BE308 /* BTbkg.png in Resources */,
 				4B801CB219A18D1200CFBDA8 /* InfoPlist.strings in Resources */,
 				4B644B9519A5E88800DCFD49 /* btn_020.press@2x.png in Resources */,
 				4BD50A6619A9D904001AF57D /* educateView.xib in Resources */,
 				4BD50A2319A9B522001AF57D /* Images.xcassets in Resources */,
+				4B5B578819AEF75B008BE308 /* findpasswordbkg.png in Resources */,
+				4B5B577F19AED9E6008BE308 /* usernameImage.png in Resources */,
 				4B644B8719A5E80300DCFD49 /* areaView.xib in Resources */,
 				4B644B9919A5E8A000DCFD49 /* ProvincesAndCities.plist in Resources */,
+				4B5B577C19AED5D1008BE308 /* inputbkgImage.png in Resources */,
 				4B4A7E7A19AB504F00601108 /* Main.storyboard in Resources */,
 				4B644B9619A5E88800DCFD49 /* btn_021.press@2x.png in Resources */,
+				4B5B577919AED395008BE308 /* welcomebkgImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,23 +664,22 @@
 			files = (
 				4B4A9E6619A63F340035A689 /* interestVC.m in Sources */,
 				4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */,
-				4BAB147319AB047200829309 /* welcomeVC.m in Sources */,
 				4B3BD23B19A35A2C009550FC /* MeCell.m in Sources */,
 				4B4AED3119ACDD66000E2FA4 /* TopicViewController.m in Sources */,
+				4B5B577619AED268008BE308 /* WelcomeViewController.m in Sources */,
 				4B4AED2B19AC889D000E2FA4 /* AdviserViewController.m in Sources */,
 				4B4AED2E19AC8ADD000E2FA4 /* MessageViewController.m in Sources */,
 				4B4A9E6019A63CF30035A689 /* jobVC.m in Sources */,
+				4B3F7FD819ADE61E00D8DF0A /* CommentListViewController.m in Sources */,
 				4B801CB419A18D1200CFBDA8 /* main.m in Sources */,
 				4B644B8519A5E7C200DCFD49 /* areaView.m in Sources */,
 				4B3F7F8B19AD98EA00D8DF0A /* EditInfoViewController.m in Sources */,
-				4BAB147C19AB135000829309 /* loginVC.m in Sources */,
 				4B43F5E919A43B3D00CB6BC6 /* SettingTVC.m in Sources */,
 				4B801CB819A18D1200CFBDA8 /* XWAppDelegate.m in Sources */,
 				4B3BD23119A3565E009550FC /* EditTVC.m in Sources */,
 				4B3BD22719A2F803009550FC /* AdviserCell.m in Sources */,
 				4BD50A6919A9DC4E001AF57D /* educateView.m in Sources */,
 				4B644B9C19A5E93C00DCFD49 /* area.m in Sources */,
-				4BAB147719AB125E00829309 /* registerVC.m in Sources */,
 				4B3F7F8819AD98BD00D8DF0A /* SendTopicViewController.m in Sources */,
 				4BA5CBB219A473F400B32CC0 /* ChatViewController.m in Sources */,
 				4B644B7619A585C600DCFD49 /* nameVC.m in Sources */,

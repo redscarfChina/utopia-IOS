@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ExpertViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-@property (strong,nonatomic)UITableView *expertTV;
+@property (nonatomic, strong)UITableView *expertTV;
 
 @end

@@ -75,7 +75,7 @@
         self.writeTopicBT.titleLabel.textColor = [UIColor whiteColor];
         self.writeTopicBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.writeTopicBT.layer.cornerRadius = 10;
-        self.writeTopicBT.backgroundColor = [UIColor greenColor];
+        [self.writeTopicBT setBackgroundImage:[UIImage imageNamed:@"BTbkg"] forState:UIControlStateNormal];
         [self addSubview:self.writeTopicBT];
     }
 }

@@ -27,9 +27,20 @@ static NSString *CellIdentifier = @"CellIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.topicTV = [self createTableViewWithHeight:455];
+    self.topicTV = [self createTableViewWithHeight:self.view.bounds.size.height];
     [self.topicTV registerClass:[TopicCell class] forCellReuseIdentifier:CellIdentifier];
     [self.view addSubview:self.topicTV];
+    
+    //searchTF2
+    self.searchTF2 = [[UITextField alloc]initWithFrame:CGRectMake(12, 12, 228, 30)];
+    self.searchTF2.borderStyle = UITextBorderStyleRoundedRect;
+    self.searchTF2.font = [UIFont systemFontOfSize:15];
+    self.searchTF2.placeholder = @"请输入关键字搜索";
+    self.searchTF2.keyboardType = UIKeyboardTypeAlphabet;
+    self.searchTF2.returnKeyType = UIReturnKeySearch;
+    self.navigationItem.titleView = self.searchTF2;
+    
+    self.searchTF2.delegate = self;
 }
 - (UITableView *)createTableViewWithHeight:(CGFloat)height{
     CGFloat x = 0;
@@ -74,5 +85,18 @@ static NSString *CellIdentifier = @"CellIdentifier";
 {
     [self performSegueWithIdentifier:@"joinToTalkView" sender:self];
 }
-
+//searchTF2
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.searchTF2 resignFirstResponder];
+    return YES;
+}
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"****************%@",textField);
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"****************%@",textField);
+}
 @end

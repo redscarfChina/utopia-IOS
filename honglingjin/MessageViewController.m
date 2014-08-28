@@ -27,9 +27,18 @@ static NSString *CellIdentifier = @"CellIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.messageTV = [self createTableViewWithHeight:455];
+    self.messageTV = [self createTableViewWithHeight:self.view.bounds.size.height];
     [self.messageTV registerClass:[NewsCell class] forCellReuseIdentifier:CellIdentifier];
     [self.view addSubview:self.messageTV];
+    
+    //sc
+    NSArray *arr = @[@"专家",@"顾问"];
+    self.sc = [[UISegmentedControl alloc]initWithItems:arr];
+    self.sc.frame = CGRectMake(110, 12, 100, 30);
+    self.sc.tintColor = [UIColor blueColor];
+    self.navigationItem.titleView = self.sc;
+    self.sc.selectedSegmentIndex = 0;
+    [self.sc addTarget:self action:@selector(scChanged:) forControlEvents:UIControlEventValueChanged];
 }
 - (UITableView *)createTableViewWithHeight:(CGFloat)height{
     CGFloat x = 0;
@@ -74,5 +83,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
 {
     [self performSegueWithIdentifier:@"againToTalkView" sender:self];
 }
-
+-(void)scChanged:(id)sender
+{
+//    NSLog(@"****************%@",sender);
+}
 @end

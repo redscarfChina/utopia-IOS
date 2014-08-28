@@ -29,7 +29,7 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.homeTV = [self createTableViewWithHeight:455];
+    self.homeTV = [self createTableViewWithHeight:self.view.bounds.size.height];
     [self.homeTV registerClass:[MeCell class] forCellReuseIdentifier:CellIdentifier1];
     [self.homeTV registerClass:[AdviserCell class] forCellReuseIdentifier:CellIdentifier2];
     [self.view addSubview:self.homeTV];
@@ -79,6 +79,7 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
         [cell.beginToTalkBT setTitle:@"修改" forState:(UIControlStateNormal)];
         cell.beginToTalkBT.backgroundColor = [UIColor lightGrayColor];
         [cell.beginToTalkBT addTarget:self action:@selector(editInfoView) forControlEvents:UIControlEventTouchUpInside];
+        [cell.checkCommentBT addTarget:self action:@selector(gotoCommentListView) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
 }
@@ -90,5 +91,9 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
 -(void)editInfoView
 {
     [self performSegueWithIdentifier:@"editInfoView" sender:self];
+}
+-(void)gotoCommentListView
+{
+    [self performSegueWithIdentifier:@"userHomeVCToCommentVC" sender:self];
 }
 @end

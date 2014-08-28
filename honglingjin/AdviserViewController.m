@@ -27,10 +27,22 @@ static NSString *CellIdentifier = @"CellIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.adviserTV = [self createTableViewWithHeight:455];
+    self.adviserTV = [self createTableViewWithHeight:self.view.bounds.size.height];
     [self.adviserTV registerClass:[AdviserCell class] forCellReuseIdentifier:CellIdentifier];
     [self.view addSubview:self.adviserTV];
+    
+    //searchTF1
+    self.searchTF1 = [[UITextField alloc]initWithFrame:CGRectMake(12, 12, 228, 30)];
+    self.searchTF1.borderStyle = UITextBorderStyleRoundedRect;
+    self.searchTF1.font = [UIFont systemFontOfSize:15];
+    self.searchTF1.placeholder = @"请输入关键字搜索";
+    self.searchTF1.keyboardType = UIKeyboardTypeAlphabet;
+    self.searchTF1.returnKeyType = UIReturnKeySearch;
+    self.navigationItem.titleView = self.searchTF1;
+    
+    self.searchTF1.delegate = self;
 }
+
 - (UITableView *)createTableViewWithHeight:(CGFloat)height{
     CGFloat x = 0;
     CGFloat y = 0;
@@ -64,7 +76,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
     [cell createContentInCell];
     [cell.userIVbt addTarget:self action:@selector(gotoExpertView) forControlEvents:UIControlEventTouchUpInside];
     [cell.beginToTalkBT addTarget:self action:@selector(beginToTalkView) forControlEvents:UIControlEventTouchUpInside];
-    [cell.checkCommentBT addTarget:self action:@selector(gotoCommentView) forControlEvents:UIControlEventTouchUpInside];
+    [cell.checkCommentBT addTarget:self action:@selector(gotoCommentListView) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 -(void)gotoExpertView
@@ -75,10 +87,23 @@ static NSString *CellIdentifier = @"CellIdentifier";
 {
     [self performSegueWithIdentifier:@"beginToTalkView" sender:self];
 }
--(void)gotoCommentView
+-(void)gotoCommentListView
 {
-    //...
+    [self performSegueWithIdentifier:@"adviserVCToCommentList" sender:self];
 }
 
-
+//searchTF1
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.searchTF1 resignFirstResponder];
+    return YES;
+}
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"****************%@",textField);
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"****************%@",textField);
+}
 @end

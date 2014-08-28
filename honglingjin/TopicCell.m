@@ -48,7 +48,7 @@
         self.joinToTalkBT.titleLabel.textColor = [UIColor whiteColor];
         self.joinToTalkBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.joinToTalkBT.layer.cornerRadius = 10;
-        self.joinToTalkBT.backgroundColor = [UIColor greenColor];
+        [self.joinToTalkBT setBackgroundImage:[UIImage imageNamed:@"BTbkg"] forState:UIControlStateNormal];
         [self addSubview:self.joinToTalkBT];
     }
     //交流属性

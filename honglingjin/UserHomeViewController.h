@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UserHomeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-@property (strong,nonatomic)UITableView *homeTV;
+@property (nonatomic, strong)UITableView *homeTV;
 
 @end
