@@ -7,7 +7,7 @@
 //
 
 #import "SettingTVC.h"
-
+#import "WelcomeViewController.h"
 @interface SettingTVC ()
 
 @end
@@ -55,16 +55,44 @@
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    NSString *CellIdentifier = @"CellIdentifier";
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    if(indexPath.section==0&&indexPath.row==0){
+        cell.textLabel.text = @"账号安全";
+        cell.detailTextLabel.text = @"已保护";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section==1&&indexPath.row==0){
+        cell.textLabel.text = @"新消息通知";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section==1&&indexPath.row==1){
+        cell.textLabel.text = @"隐私";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section==1&&indexPath.row==2){
+        cell.textLabel.text = @"通用";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section==2&&indexPath.row==0){
+        cell.textLabel.text = @"关于我们";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section==3&&indexPath.row==0){
+        UIButton *exitBT = [UIButton buttonWithType:UIButtonTypeSystem];
+        exitBT.frame = CGRectMake(60, 2, 200, 40);
+        [exitBT setTitle:@"退出登陆" forState:(UIControlStateNormal)];
+        exitBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:14];
+        [exitBT setBackgroundImage:[UIImage imageNamed:@"BTbkg"] forState:UIControlStateNormal];
+        [exitBT addTarget:self action:@selector(exitAction) forControlEvents:UIControlEventTouchUpInside];
+        [cell addSubview:exitBT];
+    }
     return cell;
 }
-*/
+-(void)exitAction
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    WelcomeViewController *wvc = [sb instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
+    [self presentViewController:wvc animated:YES completion:nil];
+}
 
 /*
 // Override to support conditional editing of the table view.

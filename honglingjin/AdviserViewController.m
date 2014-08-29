@@ -9,7 +9,7 @@
 #import "AdviserViewController.h"
 #import "AdviserCell.h"
 @interface AdviserViewController ()
-
+@property (nonatomic, assign) CGFloat adviserCellhight;
 @end
 
 @implementation AdviserViewController
@@ -41,6 +41,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
     self.navigationItem.titleView = self.searchTF1;
     
     self.searchTF1.delegate = self;
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (UITableView *)createTableViewWithHeight:(CGFloat)height{
@@ -67,13 +69,18 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [AdviserCell cellHeight];
+//    return self.adviserCellhight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AdviserCell *cell = [[AdviserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    
+    
     [cell createContentInCell];
+    cell.cellhight = self.adviserCellhight;
     [cell.userIVbt addTarget:self action:@selector(gotoExpertView) forControlEvents:UIControlEventTouchUpInside];
     [cell.beginToTalkBT addTarget:self action:@selector(beginToTalkView) forControlEvents:UIControlEventTouchUpInside];
     [cell.checkCommentBT addTarget:self action:@selector(gotoCommentListView) forControlEvents:UIControlEventTouchUpInside];
@@ -105,5 +112,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
     NSLog(@"****************%@",textField);
+}
+-(void)keyboardHide:(UITapGestureRecognizer*)tap{
+    [self.searchTF1 resignFirstResponder];
 }
 @end

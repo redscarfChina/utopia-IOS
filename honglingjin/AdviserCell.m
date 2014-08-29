@@ -12,6 +12,7 @@
 
 
 -(void)createContentInCell{
+    self.labelhight = 25;
     //用户图像
     if (!self.userIV) {
         self.userIV = [[UIImageView alloc]initWithFrame:CGRectMake(15, 5, 40, 40)];
@@ -35,9 +36,17 @@
     }
     //用户介绍
     if (!self.introduceLabel) {
-        self.introduceLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 45, 115, 25)];
-        self.introduceLabel.text = @"你是否时常在weibo...";
+        self.introduceLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 45, 150, 20)];
+        self.introduceLabel.text = @"你是否时常在爱噶接啊大哥哥街道很嘎达激烈的哈根爱就爱的了后嘎达嘎哈哦";
         self.introduceLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
+        //必须定义这个属性，否则UILabel不会换行
+        self.introduceLabel.numberOfLines = 0;
+//        label.textColor = [UIColor whiteColor];
+        //文本对齐方式
+        self.introduceLabel.textAlignment = NSTextAlignmentLeft;
+        CGSize size = [self.introduceLabel.text sizeWithFont:self.introduceLabel.font constrainedToSize:CGSizeMake(self.introduceLabel.frame.size.width, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+        [self.introduceLabel setFrame:CGRectMake(15, 45, 150, size.height)];
+        self.labelhight = size.height;
         [self addSubview:self.introduceLabel];
     }
     //向他请教
@@ -62,7 +71,7 @@
     }
     //成交数目
     if (!self.tradeNumLabel) {
-        self.tradeNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 110, 55, 21)];
+        self.tradeNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 45+self.labelhight+40, 55, 20)];
         self.tradeNumLabel.text = @"8人已成交";
         self.tradeNumLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.tradeNumLabel.textColor = [UIColor lightGrayColor];
@@ -71,7 +80,7 @@
     }
     //评论人数
     if (!self.commentNumLabel) {
-        self.commentNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(85, 110, 55, 21)];
+        self.commentNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(85, 45+self.labelhight+40, 55, 21)];
         self.commentNumLabel.text = @"4人已评论";
         self.commentNumLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.commentNumLabel.textColor = [UIColor lightGrayColor];
@@ -81,15 +90,19 @@
     //查看评论
     if (!self.checkCommentBT) {
         self.checkCommentBT = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.checkCommentBT.frame = CGRectMake(220, 105, 90, 30);
+        self.checkCommentBT.frame = CGRectMake(220, 45+self.labelhight+40-5, 90, 30);
         [self.checkCommentBT setTitle:@"查看所有评论" forState:(UIControlStateNormal)];
         self.checkCommentBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         [self addSubview:self.checkCommentBT];
     }
+//    self.cellhight = self.labelhight + 115;
 }
-
+//- (void)awakeFromNib
+//{
+//    self.cellhight = self.labelhight + 115;
+//}
 +(CGFloat)cellHeight{
-    return 140;
+    return 150;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

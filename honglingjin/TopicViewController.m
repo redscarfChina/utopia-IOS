@@ -41,6 +41,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
     self.navigationItem.titleView = self.searchTF2;
     
     self.searchTF2.delegate = self;
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 }
 - (UITableView *)createTableViewWithHeight:(CGFloat)height{
     CGFloat x = 0;
@@ -98,5 +100,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
     NSLog(@"****************%@",textField);
+}
+-(void)keyboardHide:(UITapGestureRecognizer*)tap{
+    [self.searchTF2 resignFirstResponder];
 }
 @end

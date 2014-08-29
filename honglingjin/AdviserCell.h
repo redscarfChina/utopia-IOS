@@ -20,6 +20,9 @@
 @property (nonatomic, strong) UILabel *commentNumLabel;
 @property (nonatomic, strong) UIButton *checkCommentBT;
 
+@property (nonatomic, assign) CGFloat labelhight;
+@property (nonatomic, assign) CGFloat cellhight;
+
 -(void)createContentInCell;
 +(CGFloat)cellHeight;
 @end

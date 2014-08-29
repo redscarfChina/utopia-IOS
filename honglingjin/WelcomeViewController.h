@@ -9,5 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @interface WelcomeViewController : UIViewController<UITextFieldDelegate>
+//LoginContent
+@property (nonatomic, strong) UIImageView *bkgIV;
+@property (nonatomic, strong) UIImageView *welcomeIV;
+@property (nonatomic, strong) UIImageView *inputIV;
+@property (nonatomic, strong) UITextField *inputUsernameTF;
+@property (nonatomic, strong) UITextField *inputPasswordTF;
+@property (nonatomic, strong) UIButton *registerBT;
+@property (nonatomic, strong) UIButton *forgetBT;
+@property (nonatomic, strong) UIButton *loginBT;
+//FindPasswordContent
+@property (nonatomic, strong) UIImageView *findPasswordIV;
+@property (nonatomic, strong) UITextField *inputEmailTF;
+@property (nonatomic, strong) UIButton *sendBT;
+
 
 @end
