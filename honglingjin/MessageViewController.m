@@ -8,6 +8,8 @@
 
 #import "MessageViewController.h"
 #import "NewsCell.h"
+#import "userListInfo.h"
+
 @interface MessageViewController ()
 
 @end
@@ -27,6 +29,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.userList = [userListInfo userList];
+//    NSLog(@"********%d",self.userList.count);
     self.messageTV = [self createTableViewWithHeight:self.view.bounds.size.height];
     [self.messageTV registerClass:[NewsCell class] forCellReuseIdentifier:CellIdentifier];
     [self.view addSubview:self.messageTV];
@@ -59,7 +63,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.userList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -71,6 +75,10 @@ static NSString *CellIdentifier = @"CellIdentifier";
     NewsCell *cell = [[NewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell createContentInCell];
+    //赋值
+    userListInfo *user = self.userList[indexPath.row];
+    cell.user = user;
+    
     [cell.userIVbt addTarget:self action:@selector(gotoExpertView) forControlEvents:UIControlEventTouchUpInside];
     [cell.againToTalkBT addTarget:self action:@selector(againToTalkView) forControlEvents:UIControlEventTouchUpInside];
     return cell;

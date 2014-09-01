@@ -13,16 +13,14 @@
 -(id)init
 {
     self =  [super init];
-    if (self) {
-        _iv = [UIImage imageNamed:@"iv"];
-        _name = @"Jerry";
-        _sex = @"女";
-        _area = @"广东 深圳";
-        _educate = @"大专";
-        _job = @"IT工程师";
-        _interest = @"IOS";
-        _signature =@"心动不如行动";
-    }
+    self.iv = [UIImage imageNamed:@"iv"];
+    self.name = @"Jerry";
+    self.sex = @"女";
+    self.area = @"广东 深圳";
+    self.educate = @"大专";
+    self.job = @"IT工程师";
+    self.interest = @"IOS";
+    self.signature =@"心动不如行动";
     return self;
 }
 @end

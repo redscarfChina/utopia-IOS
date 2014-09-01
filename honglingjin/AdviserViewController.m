@@ -8,6 +8,8 @@
 
 #import "AdviserViewController.h"
 #import "AdviserCell.h"
+#import "adviserListInfo.h"
+
 @interface AdviserViewController ()
 @property (nonatomic, assign) CGFloat adviserCellhight;
 @end
@@ -27,6 +29,9 @@ static NSString *CellIdentifier = @"CellIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.adviserList = [adviserListInfo adviserList];
+    
     self.adviserTV = [self createTableViewWithHeight:self.view.bounds.size.height];
     [self.adviserTV registerClass:[AdviserCell class] forCellReuseIdentifier:CellIdentifier];
     [self.view addSubview:self.adviserTV];
@@ -64,7 +69,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.adviserList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,9 +82,11 @@ static NSString *CellIdentifier = @"CellIdentifier";
     AdviserCell *cell = [[AdviserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    
-    
     [cell createContentInCell];
+    //赋值
+    adviserListInfo *adviser = self.adviserList[indexPath.row];
+    cell.adviser = adviser;
+    
     cell.cellhight = self.adviserCellhight;
     [cell.userIVbt addTarget:self action:@selector(gotoExpertView) forControlEvents:UIControlEventTouchUpInside];
     [cell.beginToTalkBT addTarget:self action:@selector(beginToTalkView) forControlEvents:UIControlEventTouchUpInside];

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "adviserListInfo.h"
 @interface AdviserCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *userIV;
@@ -19,6 +19,8 @@
 @property (nonatomic, strong) UILabel *tradeNumLabel;
 @property (nonatomic, strong) UILabel *commentNumLabel;
 @property (nonatomic, strong) UIButton *checkCommentBT;
+
+@property (nonatomic, strong) adviserListInfo *adviser;
 
 @property (nonatomic, assign) CGFloat labelhight;
 @property (nonatomic, assign) CGFloat cellhight;

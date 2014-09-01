@@ -11,4 +11,6 @@
 @interface MessageViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong)UITableView *messageTV;
 @property (nonatomic, strong)UISegmentedControl *sc;
+
+@property (nonatomic, strong)NSArray *userList;
 @end

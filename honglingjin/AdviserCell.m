@@ -12,12 +12,13 @@
 
 
 -(void)createContentInCell{
+    
     self.labelhight = 25;
+    
     //用户图像
     if (!self.userIV) {
         self.userIV = [[UIImageView alloc]initWithFrame:CGRectMake(15, 5, 40, 40)];
-        [self.userIV setImage:[UIImage imageNamed:@"iv"]];
-//        [self.userIV addSubview:self.userIVbt];
+//        self.userIV.image = self.adviser.iv.images;
         [self addSubview:self.userIV];
     }
     //图像按钮
@@ -29,23 +30,22 @@
     //用户昵称
     if (!self.userNameLabel) {
         self.userNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 10, 115, 20)];
-        self.userNameLabel.text = @"joety";
+//        self.userNameLabel.text = @"joety";
         self.userNameLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:14];
         self.userNameLabel.textAlignment = NSTextAlignmentLeft;
         [self addSubview:self.userNameLabel];
     }
     //用户介绍
     if (!self.introduceLabel) {
-        self.introduceLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 45, 150, 20)];
-        self.introduceLabel.text = @"你是否时常在爱噶接啊大哥哥街道很嘎达激烈的哈根爱就爱的了后嘎达嘎哈哦";
+        self.introduceLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 50, 150, 20)];
+        self.introduceLabel.text = @"你是否时常在爱噶接啊大哥哥街道很嘎达激烈的哈根爱就afsghjukrrk943";
         self.introduceLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         //必须定义这个属性，否则UILabel不会换行
         self.introduceLabel.numberOfLines = 0;
-//        label.textColor = [UIColor whiteColor];
         //文本对齐方式
         self.introduceLabel.textAlignment = NSTextAlignmentLeft;
         CGSize size = [self.introduceLabel.text sizeWithFont:self.introduceLabel.font constrainedToSize:CGSizeMake(self.introduceLabel.frame.size.width, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
-        [self.introduceLabel setFrame:CGRectMake(15, 45, 150, size.height)];
+        [self.introduceLabel setFrame:CGRectMake(15, 50, 150, size.height)];
         self.labelhight = size.height;
         [self addSubview:self.introduceLabel];
     }
@@ -63,7 +63,7 @@
     //交流属性
     if (!self.attributeLabel) {
         self.attributeLabel = [[UILabel alloc]initWithFrame:CGRectMake(260, 35, 42, 16)];
-        self.attributeLabel.text = @"免费";
+//        self.attributeLabel.text = @"免费";
         self.attributeLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.attributeLabel.textColor = [UIColor lightGrayColor];
         self.attributeLabel.textAlignment = NSTextAlignmentCenter;
@@ -71,8 +71,8 @@
     }
     //成交数目
     if (!self.tradeNumLabel) {
-        self.tradeNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 45+self.labelhight+40, 55, 20)];
-        self.tradeNumLabel.text = @"8人已成交";
+        self.tradeNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 45+self.labelhight+40, 65, 20)];
+//        self.tradeNumLabel.text = @"8人已成交";
         self.tradeNumLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.tradeNumLabel.textColor = [UIColor lightGrayColor];
         self.tradeNumLabel.textAlignment = NSTextAlignmentCenter;
@@ -80,8 +80,8 @@
     }
     //评论人数
     if (!self.commentNumLabel) {
-        self.commentNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(85, 45+self.labelhight+40, 55, 21)];
-        self.commentNumLabel.text = @"4人已评论";
+        self.commentNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(95, 45+self.labelhight+40, 55, 21)];
+//        self.commentNumLabel.text = @"4人已评论";
         self.commentNumLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.commentNumLabel.textColor = [UIColor lightGrayColor];
         self.commentNumLabel.textAlignment = NSTextAlignmentCenter;
@@ -95,14 +95,22 @@
         self.checkCommentBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         [self addSubview:self.checkCommentBT];
     }
-//    self.cellhight = self.labelhight + 115;
 }
-//- (void)awakeFromNib
-//{
-//    self.cellhight = self.labelhight + 115;
-//}
+
 +(CGFloat)cellHeight{
     return 150;
+//    return  self.labelhight + 115;
+}
+
+//cell赋值
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    self.userIV.image = self.adviser.iv;
+    self.userNameLabel.text = self.adviser.name;
+    self.introduceLabel.text = self.adviser.introduce;
+    self.attributeLabel.text = self.adviser.attribute;
+    self.tradeNumLabel.text = self.adviser.tradeNum;
+    self.commentNumLabel.text = self.adviser.commentNum;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

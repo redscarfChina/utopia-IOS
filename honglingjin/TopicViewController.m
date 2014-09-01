@@ -8,6 +8,7 @@
 
 #import "TopicViewController.h"
 #import "TopicCell.h"
+#import "topicListInfo.h"
 @interface TopicViewController ()
 
 @end
@@ -27,6 +28,9 @@ static NSString *CellIdentifier = @"CellIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.topicList = [topicListInfo topicList];
+    
     self.topicTV = [self createTableViewWithHeight:self.view.bounds.size.height];
     [self.topicTV registerClass:[TopicCell class] forCellReuseIdentifier:CellIdentifier];
     [self.view addSubview:self.topicTV];
@@ -63,7 +67,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.topicList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -75,6 +79,10 @@ static NSString *CellIdentifier = @"CellIdentifier";
     TopicCell *cell = [[TopicCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell createContentInCell];
+    
+    topicListInfo *topic = self.topicList[indexPath.row];
+    cell.topic = topic;
+    
     [cell.userIVbt addTarget:self action:@selector(gotoExpertView) forControlEvents:UIControlEventTouchUpInside];
     [cell.joinToTalkBT addTarget:self action:@selector(joinToTalkView) forControlEvents:UIControlEventTouchUpInside];
     return cell;

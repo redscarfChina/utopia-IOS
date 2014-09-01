@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "userListInfo.h"
 @interface NewsCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *userIV;
@@ -17,6 +17,7 @@
 @property (nonatomic, strong) UILabel *stateLabel;
 @property (nonatomic, strong) UIButton *againToTalkBT;
 
+@property (nonatomic, strong) userListInfo *user;
 
 -(void)createContentInCell;
 +(CGFloat)cellHeight;

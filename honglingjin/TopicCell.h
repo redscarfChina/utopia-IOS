@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "topicListInfo.h"
 @interface TopicCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *topicLabel;
@@ -17,6 +17,8 @@
 @property (nonatomic, strong) UIButton *joinToTalkBT;
 @property (nonatomic, strong) UILabel *attributeLabel;
 @property (nonatomic, strong) UILabel *topicNumLabel;
+
+@property (nonatomic, strong) topicListInfo *topic;
 
 -(void)createContentInCell;
 +(CGFloat)cellHeight;

@@ -12,7 +12,7 @@
 
 @interface WelcomeViewController ()
 
-@property (nonatomic, assign)  NSInteger num;
+//@property (nonatomic, assign)  NSInteger num;
 @end
 
 @implementation WelcomeViewController
@@ -105,7 +105,7 @@
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
         [self.forgetBT addGestureRecognizer:tap];
         
-        self.num = self.forgetBT.tag;
+//        self.num = self.forgetBT.tag;
         
     }
     //登陆按钮
@@ -184,17 +184,20 @@
         [self.findPasswordIV removeFromSuperview];
         [self.inputEmailTF removeFromSuperview];
         [self.sendBT removeFromSuperview];
+//        UIView *v = [[UIView alloc]initWithFrame:CGRectMake(50, welcomeIVhight+160, 220, 100)];
+//        [self.view addSubview:v];
+//        [self.view bringSubviewToFront:v];
     }];
 }
 - (void)tapped:(UITapGestureRecognizer *)tap
 {
-    self.num++;
-    NSLog(@"*************%d",self.num);
-    if (self.num / 2 ==0) {
+//    self.num++;
+//    NSLog(@"*************%d",self.num);
+//    if (self.num / 2 ==0) {
         [self createFindPasswordContent];
-    }else {
-        [self dismissFindPasswordContent];
-    }
+//    }else {
+//        [self dismissFindPasswordContent];
+//    }
 }
 -(void)sendEmailAction
 {
@@ -237,6 +240,7 @@
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [self.inputEmailTF resignFirstResponder];
     NSTimeInterval animationDuration = 0.30f;
     CGRect frame = self.view.frame;
     frame.origin.y +=100;
@@ -246,8 +250,11 @@
     [UIView beginAnimations:@"ResizeView" context:nil];
     [UIView setAnimationDuration:animationDuration];
     self.view.frame = frame;
-    [UIView commitAnimations];
-    [self.inputEmailTF resignFirstResponder];
+    if (self.inputEmailTF.text !=nil) {
+        [UIView commitAnimations];
+        [self dismissFindPasswordContent];
+        [self sendEmailAction];
+    }
     return YES;
 }
 

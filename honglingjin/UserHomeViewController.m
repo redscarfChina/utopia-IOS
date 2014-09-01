@@ -10,7 +10,7 @@
 #import "MeCell.h"
 #import "AdviserCell.h"
 @interface UserHomeViewController ()
-@property (nonatomic, assign) CGFloat adviserCellhight;
+
 @end
 
 @implementation UserHomeViewController
@@ -61,7 +61,6 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
         return [MeCell cellHeight];
     }else{
         return [AdviserCell cellHeight];
-//        return self.adviserCellhight;
     }
 }
 
@@ -76,9 +75,6 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
     }else{
         AdviserCell *cell = [[AdviserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier2];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        cell.cellhight = self.adviserCellhight;
-        
         [cell createContentInCell];
         [cell.beginToTalkBT setTitle:@"修改" forState:(UIControlStateNormal)];
         cell.beginToTalkBT.backgroundColor = [UIColor lightGrayColor];

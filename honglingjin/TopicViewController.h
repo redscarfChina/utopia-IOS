@@ -11,4 +11,7 @@
 @interface TopicViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 @property (nonatomic, strong)UITableView *topicTV;
 @property (nonatomic, strong)  UITextField *searchTF2;
+
+@property (nonatomic, strong) NSArray *topicList;
+
 @end

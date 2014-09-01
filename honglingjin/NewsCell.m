@@ -8,14 +8,16 @@
 
 #import "NewsCell.h"
 #import "ChatViewController.h"
+#import "userListInfo.h"
 @implementation NewsCell
 
 
+//创建cell
 -(void)createContentInCell{
+    
     //用户图像
     if (!self.userIV) {
         self.userIV = [[UIImageView alloc]initWithFrame:CGRectMake(20, 10, 40, 40)];
-        [self.userIV setImage:[UIImage imageNamed:@"iv"]];
         [self addSubview:self.userIV];
     }
     //图像按钮
@@ -27,7 +29,6 @@
     //用户昵称
     if (!self.userNameLabel) {
         self.userNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 10, 115, 20)];
-        self.userNameLabel.text = @"joety";
         self.userNameLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:14];
         self.userNameLabel.textAlignment = NSTextAlignmentLeft;
         [self addSubview:self.userNameLabel];
@@ -35,14 +36,12 @@
     //用户介绍
     if (!self.introduceLabel) {
         self.introduceLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 30, 115, 25)];
-        self.introduceLabel.text = @"一般来讲，我们不...";
         self.introduceLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         [self addSubview:self.introduceLabel];
     }
     //交流状态
     if (!self.stateLabel) {
         self.stateLabel = [[UILabel alloc]initWithFrame:CGRectMake(265, 10, 42, 16)];
-        self.stateLabel.text = @"已结束";
         self.stateLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.stateLabel.textColor = [UIColor lightGrayColor];
         self.stateLabel.textAlignment = NSTextAlignmentCenter;
@@ -62,8 +61,17 @@
         [self addSubview:self.againToTalkBT];
     }
 }
-
 +(CGFloat)cellHeight{
     return 57;
 }
+
+//cell赋值
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    self.userIV.image = self.user.iv;
+    self.userNameLabel.text = self.user.name;
+    self.introduceLabel.text = self.user.introduce;
+    self.stateLabel.text = self.user.state;
+}
+
 @end

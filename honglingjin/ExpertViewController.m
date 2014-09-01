@@ -10,7 +10,6 @@
 #import "MeCell.h"
 #import "AdviserCell.h"
 @interface ExpertViewController ()
-@property (nonatomic, assign) CGFloat adviserCellhight;
 @end
 
 @implementation ExpertViewController
@@ -63,8 +62,7 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
     if (indexPath.row == 0) {
         return [MeCell cellHeight];
     }else{
-//        return [AdviserCell cellHeight];
-        return self.adviserCellhight;
+        return [AdviserCell cellHeight];
     }
 }
 
@@ -80,9 +78,6 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
     }else{
         AdviserCell *cell = [[AdviserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier2];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        cell.cellhight = self.adviserCellhight;
-        
         [cell createContentInCell];
         [cell.beginToTalkBT setTitle:@"收藏一下" forState:(UIControlStateNormal)];
         cell.beginToTalkBT.backgroundColor = [UIColor lightGrayColor];
