@@ -59,7 +59,7 @@
 
 -(void)sendNameMessage:(NSString *)str
 {
-    self.user.name = str;
+    self.user.nickName = str;
 }
 -(void)sendJobMessage:(NSString *)str
 {
@@ -79,16 +79,16 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if(indexPath.section==0&&indexPath.row==0){
         cell.textLabel.text = @"更换头像";
-        cell.imageView.image = self.user.iv;
+        cell.imageView.image = self.user.userImg;
     }else if(indexPath.section==0&&indexPath.row==1){
         cell.textLabel.text = @"名字";
-        cell.detailTextLabel.text = self.user.name;
+        cell.detailTextLabel.text = self.user.nickName;
     }else if(indexPath.section==0&&indexPath.row==2){
         cell.textLabel.text = @"性别";
         cell.detailTextLabel.text = self.user.sex;
     }else if(indexPath.section==0&&indexPath.row==3){
         cell.textLabel.text = @"居住地";
-        cell.detailTextLabel.text = self.user.area;
+        cell.detailTextLabel.text = self.user.location;
     }else if(indexPath.section==1&&indexPath.row==0){
         cell.textLabel.text = @"学历";
         cell.detailTextLabel.text = self.user.educate;

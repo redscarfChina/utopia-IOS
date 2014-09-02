@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 RedScarf. All rights reserved.
 //
 
-#import "AdviserCell.h"
+#import "ConsultantCell.h"
 
-@implementation AdviserCell
+@implementation ConsultantCell
 
 
 -(void)createContentInCell{
@@ -18,7 +18,6 @@
     //用户图像
     if (!self.userIV) {
         self.userIV = [[UIImageView alloc]initWithFrame:CGRectMake(15, 5, 40, 40)];
-//        self.userIV.image = self.adviser.iv.images;
         [self addSubview:self.userIV];
     }
     //图像按钮
@@ -30,7 +29,6 @@
     //用户昵称
     if (!self.userNameLabel) {
         self.userNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 10, 115, 20)];
-//        self.userNameLabel.text = @"joety";
         self.userNameLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:14];
         self.userNameLabel.textAlignment = NSTextAlignmentLeft;
         [self addSubview:self.userNameLabel];
@@ -61,27 +59,24 @@
         [self addSubview:self.beginToTalkBT];
     }
     //交流属性
-    if (!self.attributeLabel) {
-        self.attributeLabel = [[UILabel alloc]initWithFrame:CGRectMake(260, 35, 42, 16)];
-//        self.attributeLabel.text = @"免费";
-        self.attributeLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
-        self.attributeLabel.textColor = [UIColor lightGrayColor];
-        self.attributeLabel.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:self.attributeLabel];
+    if (!self.priceLabel) {
+        self.priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(260, 35, 42, 16)];
+        self.priceLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
+        self.priceLabel.textColor = [UIColor lightGrayColor];
+        self.priceLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.priceLabel];
     }
     //成交数目
-    if (!self.tradeNumLabel) {
-        self.tradeNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 45+self.labelhight+40, 65, 20)];
-//        self.tradeNumLabel.text = @"8人已成交";
-        self.tradeNumLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
-        self.tradeNumLabel.textColor = [UIColor lightGrayColor];
-        self.tradeNumLabel.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:self.tradeNumLabel];
+    if (!self.tradeLogLabel) {
+        self.tradeLogLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 45+self.labelhight+40, 65, 20)];
+        self.tradeLogLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
+        self.tradeLogLabel.textColor = [UIColor lightGrayColor];
+        self.tradeLogLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.tradeLogLabel];
     }
     //评论人数
     if (!self.commentNumLabel) {
         self.commentNumLabel = [[UILabel alloc]initWithFrame:CGRectMake(95, 45+self.labelhight+40, 55, 21)];
-//        self.commentNumLabel.text = @"4人已评论";
         self.commentNumLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
         self.commentNumLabel.textColor = [UIColor lightGrayColor];
         self.commentNumLabel.textAlignment = NSTextAlignmentCenter;
@@ -102,16 +97,6 @@
 //    return  self.labelhight + 115;
 }
 
-//cell赋值
--(void)layoutSubviews{
-    [super layoutSubviews];
-    self.userIV.image = self.adviser.iv;
-    self.userNameLabel.text = self.adviser.name;
-    self.introduceLabel.text = self.adviser.introduce;
-    self.attributeLabel.text = self.adviser.attribute;
-    self.tradeNumLabel.text = self.adviser.tradeNum;
-    self.commentNumLabel.text = self.adviser.commentNum;
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

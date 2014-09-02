@@ -6,15 +6,17 @@
 //  Copyright (c) 2014年 RedScarf. All rights reserved.
 //
 
-#import "AdviserViewController.h"
-#import "AdviserCell.h"
-#import "adviserListInfo.h"
+#import "ConsultantViewController.h"
+#import "ConsultantCell.h"
+#import "consultantListInfo.h"
+#import "ExpertViewController.h"
 
-@interface AdviserViewController ()
+
+@interface ConsultantViewController ()
 @property (nonatomic, assign) CGFloat adviserCellhight;
 @end
 
-@implementation AdviserViewController
+@implementation ConsultantViewController
 
 static NSString *CellIdentifier = @"CellIdentifier";
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,10 +32,10 @@ static NSString *CellIdentifier = @"CellIdentifier";
 {
     [super viewDidLoad];
     
-    self.adviserList = [adviserListInfo adviserList];
+    self.adviserList = [consultantListInfo consultantList];
     
     self.adviserTV = [self createTableViewWithHeight:self.view.bounds.size.height];
-    [self.adviserTV registerClass:[AdviserCell class] forCellReuseIdentifier:CellIdentifier];
+    [self.adviserTV registerClass:[ConsultantCell class] forCellReuseIdentifier:CellIdentifier];
     [self.view addSubview:self.adviserTV];
     
     //searchTF1
@@ -73,29 +75,38 @@ static NSString *CellIdentifier = @"CellIdentifier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [AdviserCell cellHeight];
-//    return self.adviserCellhight;
+    return [ConsultantCell cellHeight];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AdviserCell *cell = [[AdviserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    ConsultantCell *cell = [[ConsultantCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     [cell createContentInCell];
+    
     //赋值
-    adviserListInfo *adviser = self.adviserList[indexPath.row];
-    cell.adviser = adviser;
+    consultantListInfo *adviser = self.adviserList[indexPath.row];
+    cell.userIV.image = adviser.userImg;
+    cell.userNameLabel.text = adviser.nickName;
+    cell.introduceLabel.text = adviser.introduce;
+    cell.priceLabel.text = adviser.price;
+    cell.tradeLogLabel.text = adviser.tradeLog;
+    cell.commentNumLabel.text = adviser.commentNum;
     
     cell.cellhight = self.adviserCellhight;
-    [cell.userIVbt addTarget:self action:@selector(gotoExpertView) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.userIVbt.tag = indexPath.row;
+    [cell.userIVbt addTarget:self action:@selector(gotoExpertView:) forControlEvents:UIControlEventTouchUpInside];
+    
     [cell.beginToTalkBT addTarget:self action:@selector(beginToTalkView) forControlEvents:UIControlEventTouchUpInside];
     [cell.checkCommentBT addTarget:self action:@selector(gotoCommentListView) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
--(void)gotoExpertView
+-(void)gotoExpertView:(UIButton*)button
 {
-    [self performSegueWithIdentifier:@"gotoExpertView1" sender:self];
+    consultantListInfo *info = self.adviserList[button.tag];
+    [self performSegueWithIdentifier:@"gotoExpertView1" sender:info];
 }
 -(void)beginToTalkView
 {
@@ -106,6 +117,14 @@ static NSString *CellIdentifier = @"CellIdentifier";
     [self performSegueWithIdentifier:@"adviserVCToCommentList" sender:self];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"gotoExpertView1"]) {
+        ExpertViewController *expertVC = segue.destinationViewController;
+        expertVC.info1 = sender;
+    }
+}
+
 //searchTF1
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -114,11 +133,11 @@ static NSString *CellIdentifier = @"CellIdentifier";
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    NSLog(@"****************%@",textField);
+//    NSLog(@"****************%@",textField);
 }
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
-    NSLog(@"****************%@",textField);
+//    NSLog(@"****************%@",textField);
 }
 -(void)keyboardHide:(UITapGestureRecognizer*)tap{
     [self.searchTF1 resignFirstResponder];

@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		4B2FBA4119B4124B008F935D /* iv.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FBA4019B4124B008F935D /* iv.png */; };
 		4B2FBA4419B41278008F935D /* iv1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FBA4319B41278008F935D /* iv1.png */; };
-		4B2FBA4719B421F4008F935D /* adviserListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FBA4619B421F4008F935D /* adviserListInfo.m */; };
+		4B2FBA4719B421F4008F935D /* consultantListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FBA4619B421F4008F935D /* consultantListInfo.m */; };
 		4B2FBA4A19B42442008F935D /* iv3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FBA4819B42442008F935D /* iv3.png */; };
 		4B2FBA4B19B42442008F935D /* iv2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B2FBA4919B42442008F935D /* iv2.png */; };
 		4B2FBA4E19B44A7B008F935D /* topicListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2FBA4D19B44A7B008F935D /* topicListInfo.m */; };
-		4B3BD22719A2F803009550FC /* AdviserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD22619A2F803009550FC /* AdviserCell.m */; };
+		4B3BD22719A2F803009550FC /* ConsultantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD22619A2F803009550FC /* ConsultantCell.m */; };
 		4B3BD22A19A2F819009550FC /* TopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD22919A2F819009550FC /* TopicCell.m */; };
 		4B3BD22D19A2F830009550FC /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD22C19A2F830009550FC /* NewsCell.m */; };
 		4B3BD23119A3565E009550FC /* EditTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3BD23019A3565E009550FC /* EditTVC.m */; };
@@ -26,6 +26,8 @@
 		4B43F5E919A43B3D00CB6BC6 /* SettingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B43F5E819A43B3D00CB6BC6 /* SettingTVC.m */; };
 		4B472E9819B407C7009B0F71 /* userListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B472E9719B407C7009B0F71 /* userListInfo.m */; };
 		4B472E9B19B40833009B0F71 /* commentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B472E9A19B40833009B0F71 /* commentInfo.m */; };
+		4B4915BE19B5687200BF0C99 /* infoParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4915BD19B5687200BF0C99 /* infoParse.m */; };
+		4B4915C119B5A13900BF0C99 /* infoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4915C019B5A13900BF0C99 /* infoRequest.m */; };
 		4B4A7E7A19AB504F00601108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A7E7919AB504F00601108 /* Main.storyboard */; };
 		4B4A9E6019A63CF30035A689 /* jobVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9E5E19A63CF30035A689 /* jobVC.m */; };
 		4B4A9E6119A63CF30035A689 /* jobVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9E5F19A63CF30035A689 /* jobVC.xib */; };
@@ -33,7 +35,7 @@
 		4B4A9E6719A63F340035A689 /* interestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9E6519A63F340035A689 /* interestVC.xib */; };
 		4B4A9E6C19A6404D0035A689 /* signatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9E6A19A6404D0035A689 /* signatureVC.m */; };
 		4B4A9E6D19A6404D0035A689 /* signatureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9E6B19A6404D0035A689 /* signatureVC.xib */; };
-		4B4AED2B19AC889D000E2FA4 /* AdviserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED2A19AC889D000E2FA4 /* AdviserViewController.m */; };
+		4B4AED2B19AC889D000E2FA4 /* ConsultantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED2A19AC889D000E2FA4 /* ConsultantViewController.m */; };
 		4B4AED2E19AC8ADD000E2FA4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED2D19AC8ADD000E2FA4 /* MessageViewController.m */; };
 		4B4AED3119ACDD66000E2FA4 /* TopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4AED3019ACDD66000E2FA4 /* TopicViewController.m */; };
 		4B5B577619AED268008BE308 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B577519AED268008BE308 /* WelcomeViewController.m */; };
@@ -91,14 +93,14 @@
 /* Begin PBXFileReference section */
 		4B2FBA4019B4124B008F935D /* iv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iv.png; sourceTree = "<group>"; };
 		4B2FBA4319B41278008F935D /* iv1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iv1.png; sourceTree = "<group>"; };
-		4B2FBA4519B421F4008F935D /* adviserListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adviserListInfo.h; sourceTree = "<group>"; };
-		4B2FBA4619B421F4008F935D /* adviserListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = adviserListInfo.m; sourceTree = "<group>"; };
+		4B2FBA4519B421F4008F935D /* consultantListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = consultantListInfo.h; sourceTree = "<group>"; };
+		4B2FBA4619B421F4008F935D /* consultantListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = consultantListInfo.m; sourceTree = "<group>"; };
 		4B2FBA4819B42442008F935D /* iv3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iv3.png; sourceTree = "<group>"; };
 		4B2FBA4919B42442008F935D /* iv2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iv2.png; sourceTree = "<group>"; };
 		4B2FBA4C19B44A7B008F935D /* topicListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topicListInfo.h; sourceTree = "<group>"; };
 		4B2FBA4D19B44A7B008F935D /* topicListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topicListInfo.m; sourceTree = "<group>"; };
-		4B3BD22519A2F803009550FC /* AdviserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviserCell.h; sourceTree = "<group>"; };
-		4B3BD22619A2F803009550FC /* AdviserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdviserCell.m; sourceTree = "<group>"; };
+		4B3BD22519A2F803009550FC /* ConsultantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultantCell.h; sourceTree = "<group>"; };
+		4B3BD22619A2F803009550FC /* ConsultantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultantCell.m; sourceTree = "<group>"; };
 		4B3BD22819A2F819009550FC /* TopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicCell.h; sourceTree = "<group>"; };
 		4B3BD22919A2F819009550FC /* TopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicCell.m; sourceTree = "<group>"; };
 		4B3BD22B19A2F830009550FC /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
@@ -123,6 +125,10 @@
 		4B472E9719B407C7009B0F71 /* userListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userListInfo.m; sourceTree = "<group>"; };
 		4B472E9919B40833009B0F71 /* commentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commentInfo.h; sourceTree = "<group>"; };
 		4B472E9A19B40833009B0F71 /* commentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commentInfo.m; sourceTree = "<group>"; };
+		4B4915BC19B5687200BF0C99 /* infoParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoParse.h; sourceTree = "<group>"; };
+		4B4915BD19B5687200BF0C99 /* infoParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoParse.m; sourceTree = "<group>"; };
+		4B4915BF19B5A13900BF0C99 /* infoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoRequest.h; sourceTree = "<group>"; };
+		4B4915C019B5A13900BF0C99 /* infoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoRequest.m; sourceTree = "<group>"; };
 		4B4A7E7919AB504F00601108 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4B4A9E5D19A63CF30035A689 /* jobVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jobVC.h; sourceTree = "<group>"; };
 		4B4A9E5E19A63CF30035A689 /* jobVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jobVC.m; sourceTree = "<group>"; };
@@ -133,8 +139,8 @@
 		4B4A9E6919A6404D0035A689 /* signatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signatureVC.h; sourceTree = "<group>"; };
 		4B4A9E6A19A6404D0035A689 /* signatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signatureVC.m; sourceTree = "<group>"; };
 		4B4A9E6B19A6404D0035A689 /* signatureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = signatureVC.xib; sourceTree = "<group>"; };
-		4B4AED2919AC889D000E2FA4 /* AdviserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviserViewController.h; sourceTree = "<group>"; };
-		4B4AED2A19AC889D000E2FA4 /* AdviserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdviserViewController.m; sourceTree = "<group>"; };
+		4B4AED2919AC889D000E2FA4 /* ConsultantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultantViewController.h; sourceTree = "<group>"; };
+		4B4AED2A19AC889D000E2FA4 /* ConsultantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultantViewController.m; sourceTree = "<group>"; };
 		4B4AED2C19AC8ADD000E2FA4 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		4B4AED2D19AC8ADD000E2FA4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		4B4AED2F19ACDD66000E2FA4 /* TopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicViewController.h; sourceTree = "<group>"; };
@@ -186,7 +192,7 @@
 		4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCUserInfo.m; sourceTree = "<group>"; };
 		4BA5CBB019A473F400B32CC0 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		4BA5CBB119A473F400B32CC0 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
-		4BD50A2219A9B522001AF57D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4BD50A2219A9B522001AF57D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = honglingjin/Images.xcassets; sourceTree = "<group>"; };
 		4BD50A6519A9D904001AF57D /* educateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = educateView.xib; sourceTree = "<group>"; };
 		4BD50A6719A9DC4E001AF57D /* educateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = educateView.h; sourceTree = "<group>"; };
 		4BD50A6819A9DC4E001AF57D /* educateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = educateView.m; sourceTree = "<group>"; };
@@ -221,6 +227,7 @@
 		4B2FBA4219B41263008F935D /* iv */ = {
 			isa = PBXGroup;
 			children = (
+				4BD50A6A19A9FC3F001AF57D /* boy.png */,
 				4B2FBA4019B4124B008F935D /* iv.png */,
 				4B2FBA4319B41278008F935D /* iv1.png */,
 				4B2FBA4819B42442008F935D /* iv3.png */,
@@ -232,8 +239,8 @@
 		4B3BD22419A2F6E9009550FC /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				4B3BD22519A2F803009550FC /* AdviserCell.h */,
-				4B3BD22619A2F803009550FC /* AdviserCell.m */,
+				4B3BD22519A2F803009550FC /* ConsultantCell.h */,
+				4B3BD22619A2F803009550FC /* ConsultantCell.m */,
 				4B3BD22819A2F819009550FC /* TopicCell.h */,
 				4B3BD22919A2F819009550FC /* TopicCell.m */,
 				4B3BD22B19A2F830009550FC /* NewsCell.h */,
@@ -303,6 +310,17 @@
 			name = "公共";
 			sourceTree = "<group>";
 		};
+		4B4915BB19B567A100BF0C99 /* infoParse */ = {
+			isa = PBXGroup;
+			children = (
+				4B4915BC19B5687200BF0C99 /* infoParse.h */,
+				4B4915BD19B5687200BF0C99 /* infoParse.m */,
+				4B4915BF19B5A13900BF0C99 /* infoRequest.h */,
+				4B4915C019B5A13900BF0C99 /* infoRequest.m */,
+			);
+			name = infoParse;
+			sourceTree = "<group>";
+		};
 		4B4A9E5C19A63C950035A689 /* job */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,7 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				4B644B7C19A5E57000DCFD49 /* name */,
-				4B644B7D19A5E58900DCFD49 /* area */,
+				4B644B7D19A5E58900DCFD49 /* location */,
 				4B644B9F19A5F74100DCFD49 /* educate */,
 				4B4A9E5C19A63C950035A689 /* job */,
 				4B4A9E6219A63E8C0035A689 /* interest */,
@@ -365,8 +383,8 @@
 			children = (
 				4B644B7919A5A06800DCFD49 /* userInfo.h */,
 				4B644B7A19A5A06800DCFD49 /* userInfo.m */,
-				4B2FBA4519B421F4008F935D /* adviserListInfo.h */,
-				4B2FBA4619B421F4008F935D /* adviserListInfo.m */,
+				4B2FBA4519B421F4008F935D /* consultantListInfo.h */,
+				4B2FBA4619B421F4008F935D /* consultantListInfo.m */,
 				4B2FBA4C19B44A7B008F935D /* topicListInfo.h */,
 				4B2FBA4D19B44A7B008F935D /* topicListInfo.m */,
 				4B472E9619B407C7009B0F71 /* userListInfo.h */,
@@ -387,7 +405,7 @@
 			name = name;
 			sourceTree = "<group>";
 		};
-		4B644B7D19A5E58900DCFD49 /* area */ = {
+		4B644B7D19A5E58900DCFD49 /* location */ = {
 			isa = PBXGroup;
 			children = (
 				4B644B8819A5E85B00DCFD49 /* sources */,
@@ -395,7 +413,7 @@
 				4B644B8419A5E7C200DCFD49 /* areaView.m */,
 				4B644B8619A5E80300DCFD49 /* areaView.xib */,
 			);
-			name = area;
+			name = location;
 			sourceTree = "<group>";
 		};
 		4B644B8819A5E85B00DCFD49 /* sources */ = {
@@ -437,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				4B801CAD19A18D1200CFBDA8 /* honglingjin */,
+				4BD50A2219A9B522001AF57D /* Images.xcassets */,
 				4B801CCC19A18D1200CFBDA8 /* honglingjinTests */,
 				4B801CA619A18D1200CFBDA8 /* Frameworks */,
 				4B801CA519A18D1200CFBDA8 /* Products */,
@@ -470,13 +489,7 @@
 				4B4A7E7919AB504F00601108 /* Main.storyboard */,
 				4B801CDC19A193C500CFBDA8 /* controller */,
 				4B801CDE19A193E300CFBDA8 /* model */,
-				4B801CB619A18D1200CFBDA8 /* XWAppDelegate.h */,
-				4B801CB719A18D1200CFBDA8 /* XWAppDelegate.m */,
 				4B801CAE19A18D1200CFBDA8 /* Supporting Files */,
-				4BD50A2219A9B522001AF57D /* Images.xcassets */,
-				4B2FBA4219B41263008F935D /* iv */,
-				4B5B578B19AF10E6008BE308 /* welcomePicture */,
-				4BD50A6A19A9FC3F001AF57D /* boy.png */,
 			);
 			path = honglingjin;
 			sourceTree = "<group>";
@@ -484,10 +497,14 @@
 		4B801CAE19A18D1200CFBDA8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B801CB619A18D1200CFBDA8 /* XWAppDelegate.h */,
+				4B801CB719A18D1200CFBDA8 /* XWAppDelegate.m */,
 				4B801CAF19A18D1200CFBDA8 /* honglingjin-Info.plist */,
 				4B801CB019A18D1200CFBDA8 /* InfoPlist.strings */,
 				4B801CB319A18D1200CFBDA8 /* main.m */,
 				4B801CB519A18D1200CFBDA8 /* honglingjin-Prefix.pch */,
+				4B5B578B19AF10E6008BE308 /* welcomePicture */,
+				4B2FBA4219B41263008F935D /* iv */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -528,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				4B644B7819A5A03B00DCFD49 /* info */,
+				4B4915BB19B567A100BF0C99 /* infoParse */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -535,8 +553,8 @@
 		4B801CDF19A1945F00CFBDA8 /* 顾问团 */ = {
 			isa = PBXGroup;
 			children = (
-				4B4AED2919AC889D000E2FA4 /* AdviserViewController.h */,
-				4B4AED2A19AC889D000E2FA4 /* AdviserViewController.m */,
+				4B4AED2919AC889D000E2FA4 /* ConsultantViewController.h */,
+				4B4AED2A19AC889D000E2FA4 /* ConsultantViewController.m */,
 			);
 			name = "顾问团";
 			sourceTree = "<group>";
@@ -711,19 +729,21 @@
 				4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */,
 				4B3BD23B19A35A2C009550FC /* MeCell.m in Sources */,
 				4B4AED3119ACDD66000E2FA4 /* TopicViewController.m in Sources */,
+				4B4915C119B5A13900BF0C99 /* infoRequest.m in Sources */,
 				4B5B577619AED268008BE308 /* WelcomeViewController.m in Sources */,
-				4B4AED2B19AC889D000E2FA4 /* AdviserViewController.m in Sources */,
+				4B4AED2B19AC889D000E2FA4 /* ConsultantViewController.m in Sources */,
 				4B4AED2E19AC8ADD000E2FA4 /* MessageViewController.m in Sources */,
 				4B4A9E6019A63CF30035A689 /* jobVC.m in Sources */,
-				4B2FBA4719B421F4008F935D /* adviserListInfo.m in Sources */,
+				4B2FBA4719B421F4008F935D /* consultantListInfo.m in Sources */,
 				4B3F7FD819ADE61E00D8DF0A /* CommentListViewController.m in Sources */,
 				4B801CB419A18D1200CFBDA8 /* main.m in Sources */,
 				4B644B8519A5E7C200DCFD49 /* areaView.m in Sources */,
 				4B3F7F8B19AD98EA00D8DF0A /* EditInfoViewController.m in Sources */,
 				4B43F5E919A43B3D00CB6BC6 /* SettingTVC.m in Sources */,
 				4B801CB819A18D1200CFBDA8 /* XWAppDelegate.m in Sources */,
+				4B4915BE19B5687200BF0C99 /* infoParse.m in Sources */,
 				4B3BD23119A3565E009550FC /* EditTVC.m in Sources */,
-				4B3BD22719A2F803009550FC /* AdviserCell.m in Sources */,
+				4B3BD22719A2F803009550FC /* ConsultantCell.m in Sources */,
 				4BD50A6919A9DC4E001AF57D /* educateView.m in Sources */,
 				4B644B9C19A5E93C00DCFD49 /* area.m in Sources */,
 				4B3F7F8819AD98BD00D8DF0A /* SendTopicViewController.m in Sources */,

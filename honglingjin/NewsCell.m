@@ -65,13 +65,4 @@
     return 57;
 }
 
-//cell赋值
--(void)layoutSubviews{
-    [super layoutSubviews];
-    self.userIV.image = self.user.iv;
-    self.userNameLabel.text = self.user.name;
-    self.introduceLabel.text = self.user.introduce;
-    self.stateLabel.text = self.user.state;
-}
-
 @end

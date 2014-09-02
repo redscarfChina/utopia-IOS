@@ -9,7 +9,7 @@
 #import "MessageViewController.h"
 #import "NewsCell.h"
 #import "userListInfo.h"
-
+#import "ExpertViewController.h"
 @interface MessageViewController ()
 
 @end
@@ -77,16 +77,31 @@ static NSString *CellIdentifier = @"CellIdentifier";
     [cell createContentInCell];
     //赋值
     userListInfo *user = self.userList[indexPath.row];
-    cell.user = user;
+    cell.userIV.image = user.userImg;
+    cell.userNameLabel.text = user.nickName;
+    cell.introduceLabel.text = user.introduce;
+    cell.stateLabel.text = user.state;
     
-    [cell.userIVbt addTarget:self action:@selector(gotoExpertView) forControlEvents:UIControlEventTouchUpInside];
+    cell.userIVbt.tag = indexPath.row;
+    [cell.userIVbt addTarget:self action:@selector(gotoExpertView:) forControlEvents:UIControlEventTouchUpInside];
     [cell.againToTalkBT addTarget:self action:@selector(againToTalkView) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
--(void)gotoExpertView
+-(void)gotoExpertView:(UIButton*)button
 {
-    [self performSegueWithIdentifier:@"gotoExpertView3" sender:self];
+    userListInfo *info = self.userList[button.tag];
+    [self performSegueWithIdentifier:@"gotoExpertView3" sender:info];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"gotoExpertView3"]) {
+        ExpertViewController *expertVC = segue.destinationViewController;
+        expertVC.info3 = sender;
+    }
+}
+
+
 -(void)againToTalkView
 {
     [self performSegueWithIdentifier:@"againToTalkView" sender:self];

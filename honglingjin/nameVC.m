@@ -21,7 +21,7 @@
     [super viewDidLoad];
     self.title = @"名字";
     self.user = [[userInfo alloc]init];
-    self.nameTF.text = self.user.name;
+    self.nameTF.text = self.user.nickName;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStyleBordered target:self action:@selector(cancel)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
 }

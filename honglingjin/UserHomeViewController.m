@@ -8,7 +8,7 @@
 
 #import "UserHomeViewController.h"
 #import "MeCell.h"
-#import "AdviserCell.h"
+#import "ConsultantCell.h"
 @interface UserHomeViewController ()
 
 @end
@@ -31,7 +31,7 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
     [super viewDidLoad];
     self.homeTV = [self createTableViewWithHeight:self.view.bounds.size.height];
     [self.homeTV registerClass:[MeCell class] forCellReuseIdentifier:CellIdentifier1];
-    [self.homeTV registerClass:[AdviserCell class] forCellReuseIdentifier:CellIdentifier2];
+    [self.homeTV registerClass:[ConsultantCell class] forCellReuseIdentifier:CellIdentifier2];
     [self.view addSubview:self.homeTV];
 }
 - (UITableView *)createTableViewWithHeight:(CGFloat)height{
@@ -60,7 +60,7 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
     if (indexPath.row == 0) {
         return [MeCell cellHeight];
     }else{
-        return [AdviserCell cellHeight];
+        return [ConsultantCell cellHeight];
     }
 }
 
@@ -73,9 +73,11 @@ static NSString *CellIdentifier2 = @"AdviserCellIdentifier";
         [cell.writeTopicBT addTarget:self action:@selector(sendTopicView) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }else{
-        AdviserCell *cell = [[AdviserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier2];
+        ConsultantCell *cell = [[ConsultantCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier2];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell createContentInCell];
+        
+        
         [cell.beginToTalkBT setTitle:@"修改" forState:(UIControlStateNormal)];
         cell.beginToTalkBT.backgroundColor = [UIColor lightGrayColor];
         [cell.beginToTalkBT addTarget:self action:@selector(editInfoView) forControlEvents:UIControlEventTouchUpInside];

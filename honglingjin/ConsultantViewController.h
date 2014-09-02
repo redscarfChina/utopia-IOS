@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AdviserViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+@interface ConsultantViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 @property (nonatomic, strong) UITableView *adviserTV;
 @property (nonatomic, strong) UITextField *searchTF1;
 

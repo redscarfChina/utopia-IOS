@@ -14,14 +14,14 @@
 +(NSArray *)userList
 {
     userInfo *user1 = [[userInfo alloc]init];
-    user1.iv = [UIImage imageNamed:@"iv"];
-    user1.name = @"Jerry";
+    user1.userImg = [UIImage imageNamed:@"iv"];
+    user1.nickName = @"Jerry";
     user1.introduce = @"是这样的，如果你真的...";
     user1.state = @"交流中";
     
     userInfo *user2 = [[userInfo alloc]init];
-    user2.iv = [UIImage imageNamed:@"iv1"];
-    user2.name = @"Karen";
+    user2.userImg = [UIImage imageNamed:@"iv1"];
+    user2.nickName = @"Karen";
     user2.introduce = @"一般来讲，我们不...";
     user2.state = @"再请教";
     

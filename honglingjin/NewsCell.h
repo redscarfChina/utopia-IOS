@@ -17,8 +17,6 @@
 @property (nonatomic, strong) UILabel *stateLabel;
 @property (nonatomic, strong) UIButton *againToTalkBT;
 
-@property (nonatomic, strong) userListInfo *user;
-
 -(void)createContentInCell;
 +(CGFloat)cellHeight;
 @end

@@ -13,10 +13,10 @@
 -(id)init
 {
     self =  [super init];
-    self.iv = [UIImage imageNamed:@"iv"];
-    self.name = @"Jerry";
+    self.userImg = [UIImage imageNamed:@"iv"];
+    self.nickName = @"Jerry";
     self.sex = @"女";
-    self.area = @"广东 深圳";
+    self.location = @"广东 深圳";
     self.educate = @"大专";
     self.job = @"IT工程师";
     self.interest = @"IOS";

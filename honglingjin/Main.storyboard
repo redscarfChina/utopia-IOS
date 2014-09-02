@@ -104,7 +104,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="yoQ-AP-aoG" kind="push" id="cYp-XT-GNf"/>
+                                            <segue destination="yoQ-AP-aoG" kind="push" identifier="gotoUserHomeVC" id="cYp-XT-GNf"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Zaw-wC-3eF" style="IBUITableViewCellStyleDefault" id="ESx-9s-dXs">
@@ -651,10 +651,10 @@
             </objects>
             <point key="canvasLocation" x="-8192" y="-4795"/>
         </scene>
-        <!--Adviser View Controller-->
+        <!--Consultant View Controller-->
         <scene sceneID="GlC-zr-uYP">
             <objects>
-                <viewController id="b7E-8i-h67" customClass="AdviserViewController" sceneMemberID="viewController">
+                <viewController id="b7E-8i-h67" customClass="ConsultantViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dGz-VP-1oh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -831,7 +831,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="3Ti-BM-g6k"/>
-        <segue reference="aaU-bx-VRT"/>
         <segue reference="57V-vR-K25"/>
+        <segue reference="aaU-bx-VRT"/>
     </inferredMetricsTieBreakers>
 </document>

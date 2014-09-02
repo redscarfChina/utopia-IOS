@@ -15,10 +15,9 @@
 @property (nonatomic, strong) UIImageView *userIV;
 @property (nonatomic, strong) UIButton *userIVbt;
 @property (nonatomic, strong) UIButton *joinToTalkBT;
-@property (nonatomic, strong) UILabel *attributeLabel;
+@property (nonatomic, strong) UILabel *priceLabel;
 @property (nonatomic, strong) UILabel *topicNumLabel;
 
-@property (nonatomic, strong) topicListInfo *topic;
 
 -(void)createContentInCell;
 +(CGFloat)cellHeight;

@@ -10,8 +10,8 @@
 
 @interface userListInfo : NSObject
 
-@property (nonatomic, strong) UIImage *iv;
-@property (nonatomic,copy) NSString *name;
+@property (nonatomic, strong) UIImage *userImg;
+@property (nonatomic,copy) NSString *nickName;
 @property (nonatomic, copy) NSString *introduce;
 @property (nonatomic, copy) NSString *state;
 

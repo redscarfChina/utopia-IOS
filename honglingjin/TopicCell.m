@@ -49,12 +49,12 @@
         [self addSubview:self.joinToTalkBT];
     }
     //交流属性
-    if (!self.attributeLabel) {
-        self.attributeLabel = [[UILabel alloc]initWithFrame:CGRectMake(260, 35, 42, 16)];
-        self.attributeLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
-        self.attributeLabel.textColor = [UIColor lightGrayColor];
-        self.attributeLabel.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:self.attributeLabel];
+    if (!self.priceLabel) {
+        self.priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(260, 35, 42, 16)];
+        self.priceLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:12];
+        self.priceLabel.textColor = [UIColor lightGrayColor];
+        self.priceLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.priceLabel];
     }
     //讨论人数
     if (!self.topicNumLabel) {
@@ -64,18 +64,6 @@
         self.topicNumLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.topicNumLabel];
     }
-}
-
-//cell赋值
--(void)layoutSubviews{
-
-    [super layoutSubviews];
-    self.topicLabel.text = self.topic.topicContent;
-    self.userNameLabel.text = self.topic.name;
-    self.userIV.image = self.topic.iv;
-    self.attributeLabel.text = self.topic.attribute;
-    self.topicNumLabel.text = self.topic.topicNum;
-    
 }
 
 +(CGFloat)cellHeight{

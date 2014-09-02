@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface adviserListInfo : NSObject
+@interface consultantListInfo : NSObject
 
-@property (nonatomic, strong) UIImage *iv;
-@property (nonatomic,copy) NSString *name;
+@property (nonatomic, strong) UIImage *userImg;
+@property (nonatomic,copy) NSString *nickName;
 @property (nonatomic, copy) NSString *introduce;
-@property (nonatomic, copy) NSString *attribute;
-@property (nonatomic,copy) NSString *tradeNum;
+@property (nonatomic, copy) NSString *price;
+@property (nonatomic,copy) NSString *tradeLog;
 @property (nonatomic, copy) NSString *commentNum;
 
-+(NSArray*)adviserList;
++(NSArray*)consultantList;
 
 @end

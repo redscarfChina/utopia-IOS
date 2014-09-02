@@ -9,6 +9,8 @@
 #import "TopicViewController.h"
 #import "TopicCell.h"
 #import "topicListInfo.h"
+#import "ExpertViewController.h"
+
 @interface TopicViewController ()
 
 @end
@@ -80,21 +82,38 @@ static NSString *CellIdentifier = @"CellIdentifier";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell createContentInCell];
     
+    //cell赋值
     topicListInfo *topic = self.topicList[indexPath.row];
-    cell.topic = topic;
+    cell.topicLabel.text = topic.topicContent;
+    cell.userNameLabel.text = topic.nickName;
+    cell.userIV.image = topic.userImg;
+    cell.priceLabel.text = topic.price;
+    cell.topicNumLabel.text = topic.topicNum;
     
-    [cell.userIVbt addTarget:self action:@selector(gotoExpertView) forControlEvents:UIControlEventTouchUpInside];
+    cell.userIVbt.tag = indexPath.row;
+    [cell.userIVbt addTarget:self action:@selector(gotoExpertView:) forControlEvents:UIControlEventTouchUpInside];
     [cell.joinToTalkBT addTarget:self action:@selector(joinToTalkView) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
--(void)gotoExpertView
+-(void)gotoExpertView:(UIButton*)button
 {
-    [self performSegueWithIdentifier:@"gotoExpertView2" sender:self];
+    topicListInfo *info = self.topicList[button.tag];
+    [self performSegueWithIdentifier:@"gotoExpertView2" sender:info];
 }
 -(void)joinToTalkView
 {
     [self performSegueWithIdentifier:@"joinToTalkView" sender:self];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"gotoExpertView2"]) {
+        ExpertViewController *expertVC = segue.destinationViewController;
+        expertVC.info2 = sender;
+    }
+}
+
+
 //searchTF2
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {

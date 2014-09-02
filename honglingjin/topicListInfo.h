@@ -11,9 +11,9 @@
 @interface topicListInfo : NSObject
 
 @property (nonatomic, copy) NSString *topicContent;
-@property (nonatomic,copy) NSString *name;
-@property (nonatomic, strong) UIImage *iv;
-@property (nonatomic, copy) NSString *attribute;
+@property (nonatomic,copy) NSString *nickName;
+@property (nonatomic, strong) UIImage *userImg;
+@property (nonatomic, copy) NSString *price;
 @property (nonatomic,copy) NSString *topicNum;
 
 

@@ -7,20 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "adviserListInfo.h"
-@interface AdviserCell : UITableViewCell
+#import "consultantListInfo.h"
+@interface ConsultantCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *userIV;
 @property (nonatomic, strong) UIButton *userIVbt;
 @property (nonatomic, strong) UILabel *userNameLabel;
 @property (nonatomic, strong) UILabel *introduceLabel;
 @property (nonatomic, strong) UIButton *beginToTalkBT;
-@property (nonatomic, strong) UILabel *attributeLabel;
-@property (nonatomic, strong) UILabel *tradeNumLabel;
+@property (nonatomic, strong) UILabel *priceLabel;
+@property (nonatomic, strong) UILabel *tradeLogLabel;
 @property (nonatomic, strong) UILabel *commentNumLabel;
 @property (nonatomic, strong) UIButton *checkCommentBT;
 
-@property (nonatomic, strong) adviserListInfo *adviser;
 
 @property (nonatomic, assign) CGFloat labelhight;
 @property (nonatomic, assign) CGFloat cellhight;

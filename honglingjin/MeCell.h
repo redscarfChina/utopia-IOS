@@ -20,6 +20,7 @@
 @property (nonatomic, strong) UILabel *starNumLabel;
 @property (nonatomic, strong) UIButton *writeTopicBT;
 
+
 -(void)createContentInCell;
 +(CGFloat)cellHeight;
 @end
