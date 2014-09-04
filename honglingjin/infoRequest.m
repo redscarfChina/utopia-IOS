@@ -31,32 +31,33 @@ static infoRequest * _request;
 -(void)registerByUserName:(NSString *)userName andPassword:(NSString *)password andCompletion:(callBack)callback
 {
     //userName=1233333&password=1212
-//    NSString *path = [NSString stringWithFormat:@"http://192.168.1.112:8080/Demo/register?userName=%@&password=%@",@"1233333",@"1212"];
-//    
-//    NSURL *url = [NSURL URLWithString:path];
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-//    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//        callback(dic);
-//        NSLog(@"************%@",dic);
-//    }];
+    NSString *path = [NSString stringWithFormat:@"http://192.168.1.105:8080/Demo/register?userName=%@&password=%@",userName,password];
     
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.112:8080/Demo/register"];
+    NSURL *url = [NSURL URLWithString:path];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    [request setHTTPMethod:@"POST"];
-    NSString *params = [NSString stringWithFormat:@"?userName=%@&password=%@",userName,password];
-    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
-    
     [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         callback(dic);
         NSLog(@"************%@",dic);
     }];
+    
+//    NSURL *url = [NSURL URLWithString:@"http://192.168.1.112:8080/Demo/register"];
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+//    [request setHTTPMethod:@"POST"];
+//    NSString *params = [NSString stringWithFormat:@"?userName=%@&password=%@",userName,password];
+//    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+//    
+//    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//        callback(dic);
+//        NSLog(@"************%@",dic);
+//    }];
 }
 
 -(void)loginByUserName:(NSString *)userName andPassword:(NSString *)password andCompletion:(callBack)callback
 {
-    NSString *path = [NSString stringWithFormat:@"http://192.168.1.112:8080/Demo/login?userName=%@&password=%@",@"1233333",@"1212"];
+    NSString *path = [NSString stringWithFormat:@"http://192.168.1.105:8080/Demo/login?userName=%@&password=%@",userName,password];
+    
     NSURL *url = [NSURL URLWithString:path];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {

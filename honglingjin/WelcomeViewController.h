@@ -19,7 +19,7 @@
 @property (nonatomic, strong) UITextField *inputUsernameTF;
 @property (nonatomic, strong) UITextField *inputPasswordTF;
 @property (nonatomic, strong) UIButton *registerBT;
-@property (nonatomic, strong) UIButton *forgetBT;
+@property (nonatomic, strong) UIButton *ignoreBT;
 @property (nonatomic, strong) UIButton *loginBT;
 //FindPasswordContent
 @property (nonatomic, strong) UIImageView *findPasswordIV;

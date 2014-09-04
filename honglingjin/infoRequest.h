@@ -19,8 +19,8 @@ typedef void (^callBack)(id obj);typedef int (^test)(id obj);
 
 -(void)registerByUserName:(NSString *)userName andPassword:(NSString *)password andCompletion:(callBack)callback;
 
-//-(void)loginByUserName:(NSString *)userName andPassword:(NSString *)password andCompletion:(callBack)callback;
-//
+-(void)loginByUserName:(NSString *)userName andPassword:(NSString *)password andCompletion:(callBack)callback;
+
 //-(void)getUserInfoWithCompletion:(callBack)callback;
 
 @end

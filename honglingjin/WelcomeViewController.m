@@ -10,7 +10,8 @@
 #import "infoRequest.h"
 
 #define welcomeIVhight 100
-
+#define userNameTF   @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.@"
+#define passwordTF @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 @interface WelcomeViewController ()
 
 //@property (nonatomic, assign)  NSInteger num;
@@ -64,6 +65,11 @@
         self.inputUsernameTF.clearButtonMode = UITextAutocorrectionTypeNo;
         [self.view addSubview:self.inputUsernameTF];
         
+        self.inputUsernameTF.delegate = self;
+        
+       
+        
+        
         [self.inputUsernameTF addTarget:self action:@selector(inputUsernameAction:) forControlEvents:UIControlEventEditingDidEndOnExit];
     }
     //输入密码
@@ -83,7 +89,9 @@
         self.inputPasswordTF.clearButtonMode = UITextAutocorrectionTypeNo;
         [self.view addSubview:self.inputPasswordTF];
         
-        [self.inputPasswordTF addTarget:self action:@selector(inputPasswordAction:) forControlEvents:UIControlEventEditingDidEndOnExit];
+        self.inputPasswordTF.delegate = self;
+        
+//        [self.inputPasswordTF addTarget:self action:@selector(inputPasswordAction:) forControlEvents:UIControlEventEditingDidEndOnExit];
     }
     //注册按钮
     if (!self.registerBT) {
@@ -96,18 +104,13 @@
         [self.view addSubview:self.registerBT];
         [self.registerBT addTarget:self action:@selector(registerAction) forControlEvents:UIControlEventTouchUpInside];
     }
-    //忘记密码
-    if (!self.forgetBT) {
-        self.forgetBT = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.forgetBT.frame = CGRectMake(135, welcomeIVhight+120, 50, 30);
-        [self.forgetBT setTitle:@"忘记密码？" forState:(UIControlStateNormal)];
-        self.forgetBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:10];
-        [self.view addSubview:self.forgetBT];
-//        [self.forgetBT addTarget:self action:@selector(findPasswordAction) forControlEvents:UIControlEventTouchUpInside];
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-        [self.forgetBT addGestureRecognizer:tap];
-        
-//        self.num = self.forgetBT.tag;
+    //忽略密码
+    if (!self.ignoreBT) {
+        self.ignoreBT = [UIButton buttonWithType:UIButtonTypeSystem];
+        self.ignoreBT.frame = CGRectMake(135, welcomeIVhight+120, 50, 30);
+        [self.ignoreBT setTitle:@"跳过注册？" forState:(UIControlStateNormal)];
+        self.ignoreBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:10];
+        [self.view addSubview:self.ignoreBT];
         
     }
     //登陆按钮
@@ -122,113 +125,112 @@
         [self.loginBT addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
     }
 }
+
+//限制textfield输入
+-(void)checkUserNameTF
+{
+    if ([self.inputUsernameTF.text length]>20 || [self.inputUsernameTF.text length]<11) {
+        UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"请输入正确的手机号或邮箱" message:nil delegate:self cancelButtonTitle:@"重新输入" otherButtonTitles:nil, nil];
+        [av show];
+    }
+}
+-(void)checkPasswordTF
+{
+    if ([self.inputPasswordTF.text length]>15 || [self.inputPasswordTF.text length]<6) {
+        UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"请输入6~15位密码" message:nil delegate:self cancelButtonTitle:@"重新输入" otherButtonTitles:nil, nil];
+        [av show];
+    }
+}
 -(void)registerAction
 {
-    if (self.inputUsernameTF.text !=nil && self.inputPasswordTF.text != nil) {
+    if ([self.inputUsernameTF.text isEqualToString:@""] && [self.inputPasswordTF.text isEqualToString:@""]) {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"请输入账号或密码" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [alert show];
+        });
+    }else if ([self.inputPasswordTF.text length]>15 || [self.inputPasswordTF.text length]<6) {
+        UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"请输入6~15位密码" message:nil delegate:self cancelButtonTitle:@"重新输入" otherButtonTitles:nil, nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [av show];
+        });
+    }else {
+        
         [[infoRequest shareRequest] registerByUserName:self.inputUsernameTF.text andPassword:self.inputPasswordTF.text andCompletion:^(id obj) {
             if(!obj){
-                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"注册失败" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"连接服务器失败" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [alert show];
                 });
             }else{
-                NSDictionary *dic= obj;
-                NSString *str = [dic objectForKey:@"message"];
-                if ([[dic objectForKey:@"code"]intValue]==500) {
+                NSString *str = [obj objectForKey:@"message"];
+                
+                if ([[obj objectForKey:@"code"]intValue]==200) {
+                    
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:str message:@"请登录" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [alert show];
+                        self.inputUsernameTF.text = @"";
+                        self.inputPasswordTF.text = @"";
+                    });
+                    
+                }else if ([[obj objectForKey:@"code"]intValue]==300) {
+
                     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:str message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [alert show];
                     });
-                }else if ([[dic objectForKey:@"code"]intValue]==200) {
-                    //
-                }else if ([[dic objectForKey:@"code"]intValue]==250) {
-                    //
+                }else if ([[obj objectForKey:@"code"]intValue]==500) {
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:str message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [alert show];
+                    });
                 }
             }
         }];
     }
 }
-//-(void)findPasswordAction
-//{
-//    [self createFindPasswordContent];
-//    
-//}
 
-//create FindPassword view
--(void)createFindPasswordContent{
-    
-    //找回密码界面
-    if (!self.findPasswordIV) {
-        self.findPasswordIV = [[UIImageView alloc]initWithFrame:CGRectMake(50, welcomeIVhight+160, 220, 100)];
-        self.findPasswordIV.image = [UIImage imageNamed:@"findpasswordbkg"];
-        [self.view addSubview:self.findPasswordIV];
-    }
-    //输入邮箱
-    if (!self.inputEmailTF) {
-        self.inputEmailTF = [[UITextField alloc]initWithFrame:CGRectMake(70, welcomeIVhight+180, 180, 30)];
-        self.inputEmailTF.borderStyle = UITextBorderStyleBezel;
-        self.inputEmailTF.font = [UIFont systemFontOfSize:12];
-        self.inputEmailTF.placeholder = @"Enter email address";
-        self.inputEmailTF.keyboardType = UIKeyboardTypeEmailAddress;
-        self.inputEmailTF.returnKeyType = UIReturnKeyDefault;
-        self.inputEmailTF.backgroundColor = [UIColor whiteColor];
-        self.inputEmailTF.autocapitalizationType = UITextAutocapitalizationTypeNone;
-        self.inputEmailTF.clearButtonMode = UITextAutocorrectionTypeNo;
-        [self.view addSubview:self.inputEmailTF];
-        
-        self.inputEmailTF.delegate = self;
-        
-        [self.inputEmailTF addTarget:self action:@selector(inputEmailAction:) forControlEvents:UIControlEventEditingDidEndOnExit];
-        
-    }
-    //点击发送
-    if (!self.sendBT) {
-        self.sendBT = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.sendBT.frame = CGRectMake(70, welcomeIVhight+220, 180, 30);
-        [self.sendBT setTitle:@"发送邮件，找回密码！" forState:(UIControlStateNormal)];
-        self.sendBT.titleLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:10];
-        [self.sendBT setBackgroundImage:[UIImage imageNamed:@"BTbkg"] forState:UIControlStateNormal];
-        [self.sendBT addTarget:self action:@selector(sendEmailAction) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:self.sendBT];
-    }
-}
-//dismiss FindPassword view
--(void)dismissFindPasswordContent
-{
-    [UIView animateWithDuration:.5 animations:^{
-        [self createFindPasswordContent];
-        self.findPasswordIV.alpha = 0.1f;
-        self.findPasswordIV.transform = CGAffineTransformMakeScale(0.1f, 0.1f);
-        self.inputEmailTF.alpha = 0.1f;
-        self.inputEmailTF.transform = CGAffineTransformMakeScale(0.1f, 0.1f);
-        self.sendBT.alpha = 0.1f;
-        self.sendBT.transform = CGAffineTransformMakeScale(0.1f, 0.1f);
-    } completion:^(BOOL finished) {
-        [self.findPasswordIV removeFromSuperview];
-        [self.inputEmailTF removeFromSuperview];
-        [self.sendBT removeFromSuperview];
-    }];
-}
-- (void)tapped:(UITapGestureRecognizer *)tap
-{
-//    self.num++;
-//    NSLog(@"*************%d",self.num);
-//    if (self.num / 2 ==0) {
-        [self createFindPasswordContent];
-//    }else {
-//        [self dismissFindPasswordContent];
-//    }
-}
--(void)sendEmailAction
-{
-    UIAlertView *av = [[UIAlertView alloc]initWithTitle:nil message:@"邮件发送中，请稍后查收" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-    [av show];
-}
 -(void)loginAction
 {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UITabBarController *tab = [sb instantiateViewControllerWithIdentifier:@"tab"];
-    [self presentViewController:tab animated:YES completion:nil];
+    if ([self.inputUsernameTF.text isEqualToString:@""] && [self.inputPasswordTF.text isEqualToString:@""]) {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"请输入账号或密码" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [alert show];
+        });
+    }else {
+        
+        [[infoRequest shareRequest] loginByUserName:self.inputUsernameTF.text andPassword:self.inputPasswordTF.text andCompletion:^(id obj) {
+            if(!obj){
+                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"连接服务器失败" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [alert show];
+                });
+            }else{
+                NSString *str = [obj objectForKey:@"message"];
+                
+                if ([[obj objectForKey:@"code"]intValue]==200) {
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                        UITabBarController *tab = [sb instantiateViewControllerWithIdentifier:@"tab"];
+                        [self presentViewController:tab animated:YES completion:nil];
+                    });
+                    
+                }else if ([[obj objectForKey:@"code"]intValue]==300) {
+                    
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:str message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [alert show];
+                    });
+                }else if ([[obj objectForKey:@"code"]intValue]==500) {
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:str message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [alert show];
+                    });
+                }
+            }
+        }];
+    }
 }
 //inputUsernameAction
 -(void)inputUsernameAction:(id)sender
@@ -238,44 +240,40 @@
 //inputUsernameAction
 -(void)inputPasswordAction:(id)sender
 {
-    [self.loginBT sendActionsForControlEvents:UIControlEventTouchUpInside];
-}
-//inputEmailTF
--(void)inputEmailAction:(id)sender
-{
-    [self.sendBT sendActionsForControlEvents:UIControlEventTouchUpInside];
+    //
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-        NSTimeInterval animationDuration = 1.0;
-        CGRect frame = self.view.frame;
-        frame.origin.y -=100;
-        frame.size.height +=100;
-        self.view.frame = frame;
-        [UIView beginAnimations:@"ResizeView" context:nil];
-        [UIView setAnimationDuration:animationDuration];
-        self.view.frame = frame;
-        [UIView commitAnimations];
+
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self.inputEmailTF resignFirstResponder];
-    NSTimeInterval animationDuration = 0.30f;
-    CGRect frame = self.view.frame;
-    frame.origin.y +=100;
-    frame.size. height -=100;
-    self.view.frame = frame;
-    //self.view移回原位置
-    [UIView beginAnimations:@"ResizeView" context:nil];
-    [UIView setAnimationDuration:animationDuration];
-    self.view.frame = frame;
-    if (self.inputEmailTF.text !=nil) {
-        [UIView commitAnimations];
-        [self dismissFindPasswordContent];
-        [self sendEmailAction];
+    if (self.inputUsernameTF) {
+        [self checkUserNameTF];
+    }else if (self.inputPasswordTF){
+        [self checkPasswordTF];
     }
     return YES;
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if(textField == self.inputUsernameTF || self.inputEmailTF)
+    {
+        NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:userNameTF] invertedSet];
+        NSString *userNameStr = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+        return [string isEqualToString:userNameStr];
+        
+        
+    }else if(textField == self.inputPasswordTF){
+        
+        NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:passwordTF] invertedSet];
+        NSString *passwordStr = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+        return [string isEqualToString:passwordStr];
+        
+    }
+     return YES;
 }
 
 -(void)keyboardHide:(UITapGestureRecognizer*)tap{

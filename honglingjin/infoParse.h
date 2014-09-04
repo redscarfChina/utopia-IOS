@@ -11,7 +11,7 @@
 #import "consultantListInfo.h"
 @interface infoParse : NSObject
 
-+(userInfo *)parseRegisterInfoWithDict:(NSDictionary *)dic;
+
 +(userInfo *)paserUserInfoByDictionary:(NSDictionary *)dic;
 +(consultantListInfo*)paserConsultantListInfoByDic:(NSDictionary*)dic;
 
