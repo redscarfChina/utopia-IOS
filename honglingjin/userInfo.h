@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface userInfo : NSObject
+
+@property (nonatomic,copy)NSString *userName;
+@property (nonatomic, copy)NSString *password;
+
+
 //userInfo
 @property (nonatomic, strong) UIImage *userImg;
 @property (nonatomic,copy)NSString *nickName;

@@ -10,15 +10,14 @@
 
 @implementation infoParse
 
+
 +(userInfo *)paserUserInfoByDictionary:(NSDictionary *)dic
 {
-    NSDictionary *userInfoDic = dic;
-    if (dic.count<10) {
-        userInfoDic = [dic objectForKey:@"data"];
-    }
+    NSDictionary *userInfoDic = [dic objectForKey:@"data"];
+
     userInfo *user = [[userInfo alloc]init];
     //头像图片
-    user.userImg = [dic objectForKey:@"userImg"];
+    user.userImg = [userInfoDic objectForKey:@"userImg"];
     //用户名称
     user.nickName = [userInfoDic objectForKey:@"nickName"];
     //性别
@@ -31,7 +30,7 @@
     return user;
 }
 
-+(consultantListInfo*)paserWeiboInfoByDic:(NSDictionary*)dic
++(consultantListInfo*)paserConsultantListInfoByDic:(NSDictionary*)dic
 {
     consultantListInfo *adviserList=[[consultantListInfo alloc]init];
     

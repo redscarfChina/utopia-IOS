@@ -73,6 +73,10 @@
 		4B801CD119A18D1300CFBDA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B801CCF19A18D1300CFBDA8 /* InfoPlist.strings */; };
 		4B801CD319A18D1300CFBDA8 /* honglingjinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CD219A18D1300CFBDA8 /* honglingjinTests.m */; };
 		4B801CF519A19E4F00CFBDA8 /* VCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */; };
+		4B9102B119B5E38100870666 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9102B019B5E38100870666 /* CFNetwork.framework */; };
+		4B9102B319B5E3A900870666 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9102B219B5E3A900870666 /* SystemConfiguration.framework */; };
+		4B9102B519B5E3B900870666 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9102B419B5E3B900870666 /* MobileCoreServices.framework */; };
+		4B9102B719B5E3F200870666 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9102B619B5E3F200870666 /* libz.1.1.3.dylib */; };
 		4BA5CBB219A473F400B32CC0 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5CBB119A473F400B32CC0 /* ChatViewController.m */; };
 		4BD50A2319A9B522001AF57D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50A2219A9B522001AF57D /* Images.xcassets */; };
 		4BD50A6619A9D904001AF57D /* educateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD50A6519A9D904001AF57D /* educateView.xib */; };
@@ -190,6 +194,10 @@
 		4B801CD219A18D1300CFBDA8 /* honglingjinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = honglingjinTests.m; sourceTree = "<group>"; };
 		4B801CF319A19E4F00CFBDA8 /* VCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCUserInfo.h; sourceTree = "<group>"; };
 		4B801CF419A19E4F00CFBDA8 /* VCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCUserInfo.m; sourceTree = "<group>"; };
+		4B9102B019B5E38100870666 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4B9102B219B5E3A900870666 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4B9102B419B5E3B900870666 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4B9102B619B5E3F200870666 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		4BA5CBB019A473F400B32CC0 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		4BA5CBB119A473F400B32CC0 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		4BD50A2219A9B522001AF57D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = honglingjin/Images.xcassets; sourceTree = "<group>"; };
@@ -204,6 +212,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9102B719B5E3F200870666 /* libz.1.1.3.dylib in Frameworks */,
+				4B9102B519B5E3B900870666 /* MobileCoreServices.framework in Frameworks */,
+				4B9102B319B5E3A900870666 /* SystemConfiguration.framework in Frameworks */,
+				4B9102B119B5E38100870666 /* CFNetwork.framework in Frameworks */,
 				4B644B9E19A5EA1700DCFD49 /* QuartzCore.framework in Frameworks */,
 				4B801CAA19A18D1200CFBDA8 /* CoreGraphics.framework in Frameworks */,
 				4B801CAC19A18D1200CFBDA8 /* UIKit.framework in Frameworks */,
@@ -313,10 +325,10 @@
 		4B4915BB19B567A100BF0C99 /* infoParse */ = {
 			isa = PBXGroup;
 			children = (
-				4B4915BC19B5687200BF0C99 /* infoParse.h */,
-				4B4915BD19B5687200BF0C99 /* infoParse.m */,
 				4B4915BF19B5A13900BF0C99 /* infoRequest.h */,
 				4B4915C019B5A13900BF0C99 /* infoRequest.m */,
+				4B4915BC19B5687200BF0C99 /* infoParse.h */,
+				4B4915BD19B5687200BF0C99 /* infoParse.m */,
 			);
 			name = infoParse;
 			sourceTree = "<group>";
@@ -474,6 +486,10 @@
 		4B801CA619A18D1200CFBDA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B9102B619B5E3F200870666 /* libz.1.1.3.dylib */,
+				4B9102B419B5E3B900870666 /* MobileCoreServices.framework */,
+				4B9102B219B5E3A900870666 /* SystemConfiguration.framework */,
+				4B9102B019B5E38100870666 /* CFNetwork.framework */,
 				4B644B9D19A5EA1700DCFD49 /* QuartzCore.framework */,
 				4B801CA719A18D1200CFBDA8 /* Foundation.framework */,
 				4B801CA919A18D1200CFBDA8 /* CoreGraphics.framework */,
@@ -607,9 +623,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B801CD619A18D1300CFBDA8 /* Build configuration list for PBXNativeTarget "honglingjin" */;
 			buildPhases = (
+				4B801CA219A18D1200CFBDA8 /* Resources */,
 				4B801CA019A18D1200CFBDA8 /* Sources */,
 				4B801CA119A18D1200CFBDA8 /* Frameworks */,
-				4B801CA219A18D1200CFBDA8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -830,6 +846,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode\\ .app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"${SDK_DIR}/usr/include/",
+					libxml2,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -862,6 +884,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode\\ .app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"${SDK_DIR}/usr/include/",
+					libxml2,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

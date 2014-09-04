@@ -7,25 +7,19 @@
 //
 
 #import "VCUserInfo.h"
-
+#import "EditTVC.h"
+#import "UserHomeViewController.h"
+#import "SettingTVC.h"
 @interface VCUserInfo ()
 
 @end
 
 @implementation VCUserInfo
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.title = @"个人信息";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -33,64 +27,72 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-/*
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
- {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
- 
- // Configure the cell...
- 
- return cell;
- }
- */
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return 3;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    if (section==0) {
+        return 1;
+    }else if (section==1) {
+        return 3;
+    }else if (section==2) {
+        return 1;
+    }
+    return 0;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *CellIdentifier = @"CellIdentifier";
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    if(indexPath.section==0&&indexPath.row==0){
+        cell.textLabel.text = @"手机号:18664552099";
+        cell.textLabel.font = [UIFont fontWithName:@"Trebuchet MS" size:15];
+        cell.detailTextLabel.text = @"编辑个人信息";
+        cell.imageView.image = [UIImage imageNamed:@"iv"];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section==1&&indexPath.row==0){
+        cell.textLabel.text = @"我是专家";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section==1&&indexPath.row==1){
+        cell.textLabel.text = @"我的账户";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section==1&&indexPath.row==2){
+        cell.textLabel.text = @"成交记录";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section==2&&indexPath.row==0){
+        cell.textLabel.text = @"设置";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    return cell;
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    if(indexPath.section==0&&indexPath.row==0){
+        [self performSegueWithIdentifier:@"gotoEditTVC" sender:self];
+    }else if(indexPath.section==1&&indexPath.row==0){
+        [self performSegueWithIdentifier:@"gotoUserHomeVC" sender:self];
+    }else if(indexPath.section==1&&indexPath.row==1){
+       //
+    }else if(indexPath.section==1&&indexPath.row==2){
+       //
+    }else if(indexPath.section==2&&indexPath.row==0){
+        [self performSegueWithIdentifier:@"gotoSettingTVC" sender:self];
+    }
 }
-*/
+//
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([segue.identifier isEqualToString:@"gotoEditTVC"]) {
+//        EditTVC *tvc = [[EditTVC alloc]initWithNibName:@"EditTVC" bundle:nil];
+//        [self presentViewController:tvc animated:YES completion:nil];
+//    }
+//}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -58,29 +58,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEv-tb-2PR" id="hhV-bj-Cu6">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iv" id="zks-B6-weY">
-                                                    <rect key="frame" x="13" y="10" width="63" height="59"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编辑个人信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ahB-No-4qf">
-                                                    <rect key="frame" x="92" y="38" width="159" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号：18664552099" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rkq-7q-rbl">
-                                                    <rect key="frame" x="92" y="9" width="159" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Dup-UO-6Sm" kind="push" identifier="" id="idj-IG-FDH"/>
+                                            <segue destination="Dup-UO-6Sm" kind="push" identifier="gotoEditTVC" id="idj-IG-FDH"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -162,7 +142,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Bf4-Ol-SYh" kind="push" id="RvB-Fc-qxz"/>
+                                            <segue destination="Bf4-Ol-SYh" kind="push" identifier="gotoSettingTVC" id="RvB-Fc-qxz"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -817,7 +797,6 @@
         <image name="add_pic" width="29" height="25"/>
         <image name="adviser" width="78" height="45"/>
         <image name="dangqian" width="144" height="34"/>
-        <image name="iv" width="152" height="154"/>
         <image name="mic_hover" width="20" height="30"/>
         <image name="news" width="78" height="45"/>
         <image name="send_bg" width="63" height="35"/>
@@ -831,7 +810,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="3Ti-BM-g6k"/>
-        <segue reference="57V-vR-K25"/>
         <segue reference="aaU-bx-VRT"/>
+        <segue reference="91d-tH-Qg4"/>
     </inferredMetricsTieBreakers>
 </document>

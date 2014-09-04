@@ -7,6 +7,7 @@
 //
 
 #import "WelcomeViewController.h"
+#import "infoRequest.h"
 
 #define welcomeIVhight 100
 
@@ -72,6 +73,7 @@
         [self.view addSubview:passwordIV];
         self.inputPasswordTF = [[UITextField alloc]initWithFrame:CGRectMake(100, welcomeIVhight+70, 150, 30)];
         self.inputPasswordTF.borderStyle = UITextBorderStyleBezel;
+        self.inputPasswordTF.secureTextEntry = YES;
         self.inputPasswordTF.font = [UIFont systemFontOfSize:15];
         self.inputPasswordTF.placeholder = @"password";
         self.inputPasswordTF.keyboardType = UIKeyboardTypeAlphabet;
@@ -122,8 +124,29 @@
 }
 -(void)registerAction
 {
-    UIAlertView *av = [[UIAlertView alloc]initWithTitle:nil message:@"注册成功" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-    [av show];
+    if (self.inputUsernameTF.text !=nil && self.inputPasswordTF.text != nil) {
+        [[infoRequest shareRequest] registerByUserName:self.inputUsernameTF.text andPassword:self.inputPasswordTF.text andCompletion:^(id obj) {
+            if(!obj){
+                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"注册失败" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [alert show];
+                });
+            }else{
+                NSDictionary *dic= obj;
+                NSString *str = [dic objectForKey:@"message"];
+                if ([[dic objectForKey:@"code"]intValue]==500) {
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:str message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [alert show];
+                    });
+                }else if ([[dic objectForKey:@"code"]intValue]==200) {
+                    //
+                }else if ([[dic objectForKey:@"code"]intValue]==250) {
+                    //
+                }
+            }
+        }];
+    }
 }
 //-(void)findPasswordAction
 //{
@@ -184,9 +207,6 @@
         [self.findPasswordIV removeFromSuperview];
         [self.inputEmailTF removeFromSuperview];
         [self.sendBT removeFromSuperview];
-//        UIView *v = [[UIView alloc]initWithFrame:CGRectMake(50, welcomeIVhight+160, 220, 100)];
-//        [self.view addSubview:v];
-//        [self.view bringSubviewToFront:v];
     }];
 }
 - (void)tapped:(UITapGestureRecognizer *)tap
